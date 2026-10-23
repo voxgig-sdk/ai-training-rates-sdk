@@ -1,0 +1,72 @@
+<?php
+declare(strict_types=1);
+
+// AiTrainingRates SDK utility registration
+
+require_once __DIR__ . '/../core/UtilityType.php';
+require_once __DIR__ . '/Clean.php';
+require_once __DIR__ . '/Done.php';
+require_once __DIR__ . '/MakeError.php';
+require_once __DIR__ . '/FeatureAdd.php';
+require_once __DIR__ . '/FeatureHook.php';
+require_once __DIR__ . '/FeatureInit.php';
+require_once __DIR__ . '/Fetcher.php';
+require_once __DIR__ . '/MakeFetchDef.php';
+require_once __DIR__ . '/MakeContext.php';
+require_once __DIR__ . '/MakeOptions.php';
+require_once __DIR__ . '/MakeRequest.php';
+require_once __DIR__ . '/MakeResponse.php';
+require_once __DIR__ . '/MakeResult.php';
+require_once __DIR__ . '/MakePoint.php';
+require_once __DIR__ . '/MakeSpec.php';
+require_once __DIR__ . '/MakeUrl.php';
+require_once __DIR__ . '/Param.php';
+require_once __DIR__ . '/PrepareAuth.php';
+require_once __DIR__ . '/PrepareBody.php';
+require_once __DIR__ . '/Graphql.php';
+require_once __DIR__ . '/PrepareHeaders.php';
+require_once __DIR__ . '/PrepareMethod.php';
+require_once __DIR__ . '/PrepareParams.php';
+require_once __DIR__ . '/PreparePath.php';
+require_once __DIR__ . '/PrepareQuery.php';
+require_once __DIR__ . '/ResultBasic.php';
+require_once __DIR__ . '/ResultBody.php';
+require_once __DIR__ . '/ResultHeaders.php';
+require_once __DIR__ . '/TransformRequest.php';
+require_once __DIR__ . '/TransformResponse.php';
+
+AiTrainingRatesUtility::setRegistrar(function (AiTrainingRatesUtility $u): void {
+    $u->clean = [AiTrainingRatesClean::class, 'call'];
+    $u->clean_add = [AiTrainingRatesClean::class, 'add'];
+    $u->clean_explain = [AiTrainingRatesDone::class, 'clean_explain'];
+    $u->done = [AiTrainingRatesDone::class, 'call'];
+    $u->make_error = [AiTrainingRatesMakeError::class, 'call'];
+    $u->feature_add = [AiTrainingRatesFeatureAdd::class, 'call'];
+    $u->feature_hook = [AiTrainingRatesFeatureHook::class, 'call'];
+    $u->feature_init = [AiTrainingRatesFeatureInit::class, 'call'];
+    $u->fetcher = [AiTrainingRatesFetcher::class, 'call'];
+    $u->make_fetch_def = [AiTrainingRatesMakeFetchDef::class, 'call'];
+    $u->make_context = [AiTrainingRatesMakeContext::class, 'call'];
+    $u->make_options = [AiTrainingRatesMakeOptions::class, 'call'];
+    $u->make_request = [AiTrainingRatesMakeRequest::class, 'call'];
+    $u->make_response = [AiTrainingRatesMakeResponse::class, 'call'];
+    $u->make_result = [AiTrainingRatesMakeResult::class, 'call'];
+    $u->make_point = [AiTrainingRatesMakePoint::class, 'call'];
+    $u->make_spec = [AiTrainingRatesMakeSpec::class, 'call'];
+    $u->make_url = [AiTrainingRatesMakeUrl::class, 'call'];
+    $u->param = [AiTrainingRatesParam::class, 'call'];
+    $u->prepare_auth = [AiTrainingRatesPrepareAuth::class, 'call'];
+    $u->prepare_body = [AiTrainingRatesPrepareBody::class, 'call'];
+    $u->prepare_headers = [AiTrainingRatesPrepareHeaders::class, 'call'];
+    $u->prepare_method = [AiTrainingRatesPrepareMethod::class, 'call'];
+    $u->prepare_params = [AiTrainingRatesPrepareParams::class, 'call'];
+    $u->prepare_path = [AiTrainingRatesPreparePath::class, 'call'];
+    $u->prepare_query = [AiTrainingRatesPrepareQuery::class, 'call'];
+    $u->graphql_body = [AiTrainingRatesGraphql::class, 'body'];
+    $u->graphql_errors = [AiTrainingRatesGraphql::class, 'errors'];
+    $u->result_basic = [AiTrainingRatesResultBasic::class, 'call'];
+    $u->result_body = [AiTrainingRatesResultBody::class, 'call'];
+    $u->result_headers = [AiTrainingRatesResultHeaders::class, 'call'];
+    $u->transform_request = [AiTrainingRatesTransformRequest::class, 'call'];
+    $u->transform_response = [AiTrainingRatesTransformResponse::class, 'call'];
+});

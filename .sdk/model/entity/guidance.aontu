@@ -1,0 +1,107 @@
+# Entity: guidance
+
+main: kit: entity: guidance: {
+
+  alias: field: {}
+
+  fields: {
+    addedOn: {
+      h: "Added On"
+      n: "addedOn"
+      r: true
+      t: "`$STRING`"
+    }
+    finding: {
+      h: "Finding"
+      n: "finding"
+      r: true
+      t: "`$STRING`"
+    }
+    howToUse: {
+      h: "How To Use"
+      n: "howToUse"
+      r: true
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: true
+      t: "`$STRING`"
+    }
+    lever: {
+      h: "Lever"
+      n: "lever"
+      r: true
+      t: "`$STRING`"
+    }
+    readOn: {
+      h: "Read On"
+      n: "readOn"
+      r: true
+      t: "`$STRING`"
+    }
+    side: {
+      h: "Side"
+      n: "side"
+      r: true
+      sh: "Values seen: both, buyer, seller."
+      t: "`$STRING`"
+    }
+    sources: {
+      h: "Sources"
+      n: "sources"
+      r: true
+      t: "`$ARRAY`"
+    }
+    strength: {
+      h: "Strength"
+      n: "strength"
+      r: true
+      sh: "Values seen: indicative, strong."
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "guidance"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /datasets/negotiation-levers.json"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/datasets/negotiation-levers.json"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "datasets"
+            }
+            {
+              lit: "negotiation-levers.json"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

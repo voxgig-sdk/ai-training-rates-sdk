@@ -1,0 +1,33 @@
+{
+  "files": [
+    "SUMMARY.md"
+  ],
+  "config": ".sdk/doc/qa/vale.ini",
+  "routes": {},
+  "quoted": {
+    "SUMMARY.md": [
+      "AIData.Broker static datasets",
+      "Eligibility criteria as published by the buyer; every key is optional.",
+      "Ids of the price observations (listPrices) behind this row.",
+      "Number of observations.",
+      "Static JSON datasets published by AIData.Broker about the market for AI training data: market rates, price observations, deals, buyers, vendors, lawsuits, funding, revenue and licensing guidance. The catalog entry points at https://aidata.broker/datasets/market-rates.json; the full list of 15 tables comes from https://aidata.broker/llms.txt (section Datasets). Every schema was taken from live GET probes of all 15 JSON files on 2026-10-23 (no key, CORS enabled, cached for an hour). Each response is the same envelope (dataset, description, reviewed, license, rows) around a different row type. The CSV twin of each table (same path with .csv) is not modelled. The tables are reviewed and republished often, so optional fields (marked by absence from required) may come and go; enum-like value lists in descriptions are only what the probe saw. Licence: the compilation is CC BY 4.0; quoted text keeps its sources&#39; terms. Unverified: type of MarketRate.segment (always null in the probe). Large: prices.json is about 1.6 MB.",
+      "Structured introducer (referral) fee terms: rate is a fraction, cap and flat are USD.",
+      "Successful response",
+      "The vendor&#39;s own words and the page they are on.",
+      "Values seen: CNY, GBP, JPY, KRW, SGD, TWD.",
+      "Values seen: acquisition, financing, funding, investment, secondary, valuation.",
+      "Values seen: aitraining-jobs-pay, aitraining-jobs-platform-pay.",
+      "Values seen: bars-ai-training, bars-copying, none-found, unclear.",
+      "Values seen: both, buyer, seller.",
+      "Values seen: both, display/grounding, training, unstated.",
+      "Values seen: broker economics, buyer program, intermediary, legal or policy, price range, referral terms, transaction.",
+      "Values seen: broker, collector, marketplace, principal, wind-down.",
+      "Values seen: docket, listing, reported, stated, vendor.",
+      "Values seen: guidance, lawsuit, regulatory action, ruling, settlement.",
+      "Values seen: high, low, medium.",
+      "Values seen: indicative, strong.",
+      "Values seen: limited, unclear, yes.",
+      "Values seen: reported, stated."
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      auth: false
+      contact: {
+        name: "AIData.Broker"
+        url: "https://aidata.broker/"
+      }
+      description: "Static JSON datasets published by AIData.Broker about the market for AI training data: market rates, price observations, deals, buyers, vendors, lawsuits, funding, revenue and licensing guidance. The catalog entry points at https://aidata.broker/datasets/market-rates.json; the full list of 15 tables comes from https://aidata.broker/llms.txt (section Datasets). Every schema was taken from live GET probes of all 15 JSON files on 2026-10-23 (no key, CORS enabled, cached for an hour). Each response is the same envelope (dataset, description, reviewed, license, rows) around a different row type. The CSV twin of each table (same path with .csv) is not modelled. The tables are reviewed and republished often, so optional fields (marked by absence from required) may come and go; enum-like value lists in descriptions are only what the probe saw. Licence: the compilation is CC BY 4.0; quoted text keeps its sources' terms. Unverified: type of MarketRate.segment (always null in the probe). Large: prices.json is about 1.6 MB."
+      license: {
+        name: "CC BY 4.0 (compilation)"
+        url: "https://creativecommons.org/licenses/by/4.0/"
+      }
+      servers: [
+        {
+          description: "AIData.Broker static datasets"
+          url: "https://aidata.broker"
+        }
+      ]
+      summary: "Static JSON datasets published by AIData.Broker about the market for AI training data: market rates, price observations, deals, buyers, vendors, lawsuits, funding, revenue and licensing guidance."
+      title: "AI Training Rates (AIData.Broker datasets)"
+      version: "1.0.0"
+      website: "https://aidata.broker"
+    }
+  }
+}
+

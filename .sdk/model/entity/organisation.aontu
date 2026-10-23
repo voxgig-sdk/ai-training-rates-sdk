@@ -1,0 +1,317 @@
+# Entity: organisation
+
+main: kit: entity: organisation: {
+
+  alias: field: {}
+
+  fields: {
+    aka: {
+      h: "Aka"
+      n: "aka"
+      r: false
+      t: "`$ARRAY`"
+    }
+    areas: {
+      h: "Areas"
+      n: "areas"
+      r: true
+      t: "`$ARRAY`"
+    }
+    basis: {
+      h: "Basis"
+      n: "basis"
+      r: true
+      sh: "Values seen: reported, stated."
+      t: "`$STRING`"
+    }
+    buysData: {
+      h: "Buys Data"
+      n: "buysData"
+      r: true
+      sh: "The vendor's own words and the page they are on."
+      t: "`$OBJECT`"
+    }
+    criteria: {
+      h: "Criteria"
+      n: "criteria"
+      r: true
+      sh: "Eligibility criteria as published by the buyer; every key is optional."
+      t: "`$OBJECT`"
+    }
+    deidentifiedBy: {
+      h: "Deidentified By"
+      n: "deidentifiedBy"
+      r: false
+      t: "`$STRING`"
+    }
+    domain: {
+      h: "Domain"
+      n: "domain"
+      r: true
+      t: "`$STRING`"
+    }
+    eligibility: {
+      h: "Eligibility"
+      n: "eligibility"
+      r: true
+      t: "`$STRING`"
+    }
+    founded: {
+      h: "Founded"
+      n: "founded"
+      r: true
+      t: "`$INTEGER`"
+    }
+    high: {
+      h: "High"
+      n: "high"
+      r: true
+      t: "`$INTEGER`"
+    }
+    hq: {
+      h: "Hq"
+      n: "hq"
+      r: true
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: true
+      t: "`$STRING`"
+    }
+    introducerFee: {
+      h: "Introducer Fee"
+      n: "introducerFee"
+      r: true
+      t: "`$STRING`"
+    }
+    introducerTerms: {
+      h: "Introducer Terms"
+      n: "introducerTerms"
+      r: false
+      sh: "Structured introducer (referral) fee terms: rate is a fraction, cap and flat are USD."
+      t: "`$OBJECT`"
+    }
+    kind: {
+      h: "Kind"
+      n: "kind"
+      r: true
+      sh: "Values seen: broker, collector, marketplace, principal, wind-down."
+      t: "`$STRING`"
+    }
+    low: {
+      h: "Low"
+      n: "low"
+      r: true
+      t: "`$INTEGER`"
+    }
+    madeFrom: {
+      h: "Made From"
+      n: "madeFrom"
+      r: true
+      t: "`$ARRAY`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: true
+      t: "`$STRING`"
+    }
+    otherDomains: {
+      h: "Other Domains"
+      n: "otherDomains"
+      r: false
+      t: "`$ARRAY`"
+    }
+    paidInDays: {
+      h: "Paid In Days"
+      n: "paidInDays"
+      r: false
+      t: "`$INTEGER`"
+    }
+    paidWhen: {
+      h: "Paid When"
+      n: "paidWhen"
+      r: true
+      t: "`$STRING`"
+    }
+    pays: {
+      h: "Pays"
+      n: "pays"
+      r: true
+      t: "`$STRING`"
+    }
+    proof: {
+      h: "Proof"
+      n: "proof"
+      r: true
+      t: "`$OBJECT`"
+    }
+    readOn: {
+      h: "Read On"
+      n: "readOn"
+      r: true
+      t: "`$STRING`"
+    }
+    record: {
+      h: "Record"
+      n: "record"
+      r: true
+      t: "`$OBJECT`"
+    }
+    says: {
+      h: "Says"
+      n: "says"
+      r: true
+      sh: "The vendor's own words and the page they are on."
+      t: "`$OBJECT`"
+    }
+    scrub: {
+      h: "Scrub"
+      n: "scrub"
+      r: true
+      t: "`$STRING`"
+    }
+    sells: {
+      h: "Sells"
+      n: "sells"
+      r: true
+      t: "`$ARRAY`"
+    }
+    source: {
+      h: "Source"
+      n: "source"
+      r: true
+      t: "`$STRING`"
+    }
+    sourceLabel: {
+      h: "Source Label"
+      n: "sourceLabel"
+      r: true
+      t: "`$STRING`"
+    }
+    takes: {
+      h: "Takes"
+      n: "takes"
+      r: true
+      t: "`$ARRAY`"
+    }
+    wants: {
+      h: "Wants"
+      n: "wants"
+      r: true
+      t: "`$STRING`"
+    }
+    website: {
+      h: "Website"
+      n: "website"
+      r: true
+      t: "`$STRING`"
+    }
+    what: {
+      h: "What"
+      n: "what"
+      r: true
+      t: "`$STRING`"
+    }
+    whatSource: {
+      h: "What Source"
+      n: "whatSource"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "organisation"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /datasets/buyers.json"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/datasets/buyers.json"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "datasets"
+            }
+            {
+              lit: "buyers.json"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /datasets/companies.json"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/datasets/companies.json"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "datasets"
+            }
+            {
+              lit: "companies.json"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /datasets/vendors.json"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/datasets/vendors.json"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "datasets"
+            }
+            {
+              lit: "vendors.json"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

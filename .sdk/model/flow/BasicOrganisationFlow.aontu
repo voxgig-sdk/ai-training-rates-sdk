@@ -1,0 +1,22 @@
+# BasicOrganisationFlow
+
+main: kit: flow: BasicOrganisationFlow:
+{
+  entity: "organisation",
+  kind: "basic",
+  name: "BasicOrganisationFlow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "organisation_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicOrganisationFlow"
+}

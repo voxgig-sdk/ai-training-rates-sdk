@@ -1,0 +1,461 @@
+# Entity: market
+
+main: kit: entity: market: {
+
+  alias: field: {}
+
+  fields: {
+    acquirer: {
+      h: "Acquirer"
+      n: "acquirer"
+      r: true
+      t: "`$STRING`"
+    }
+    addedOn: {
+      h: "Added On"
+      n: "addedOn"
+      r: true
+      t: "`$STRING`"
+    }
+    amountText: {
+      h: "Amount Text"
+      n: "amountText"
+      r: true
+      t: "`$STRING`"
+    }
+    amountUsd: {
+      h: "Amount Usd"
+      n: "amountUsd"
+      r: true
+      t: "`$INTEGER`"
+    }
+    annualUsd: {
+      h: "Annual Usd"
+      n: "annualUsd"
+      r: true
+      t: "`$INTEGER`"
+    }
+    basis: {
+      h: "Basis"
+      n: "basis"
+      r: true
+      sh: "Values seen: reported, stated."
+      t: "`$STRING`"
+    }
+    channel: {
+      h: "Channel"
+      n: "channel"
+      r: true
+      t: "`$STRING`"
+    }
+    checkWith: {
+      h: "Check With"
+      n: "checkWith"
+      r: false
+      t: "`$STRING`"
+    }
+    company: {
+      h: "Company"
+      n: "company"
+      r: true
+      t: "`$STRING`"
+    }
+    companyId: {
+      h: "Company Id"
+      n: "companyId"
+      r: true
+      t: "`$STRING`"
+    }
+    content: {
+      h: "Content"
+      n: "content"
+      r: true
+      t: "`$STRING`"
+    }
+    counterparty: {
+      h: "Counterparty"
+      n: "counterparty"
+      r: true
+      t: "`$STRING`"
+    }
+    dataType: {
+      h: "Data Type"
+      n: "dataType"
+      r: true
+      t: "`$STRING`"
+    }
+    date: {
+      h: "Date"
+      n: "date"
+      r: true
+      t: "`$STRING`"
+    }
+    event: {
+      h: "Event"
+      n: "event"
+      r: true
+      sh: "Values seen: acquisition, financing, funding, investment, secondary, valuation."
+      t: "`$STRING`"
+    }
+    fact: {
+      h: "Fact"
+      n: "fact"
+      r: true
+      t: "`$STRING`"
+    }
+    figure: {
+      h: "Figure"
+      n: "figure"
+      r: true
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: true
+      t: "`$STRING`"
+    }
+    kind: {
+      h: "Kind"
+      n: "kind"
+      r: true
+      sh: "Values seen: broker economics, buyer program, intermediary, legal or policy, price range, referral terms, transaction."
+      t: "`$STRING`"
+    }
+    leadInvestors: {
+      h: "Lead Investors"
+      n: "leadInvestors"
+      r: true
+      t: "`$ARRAY`"
+    }
+    licensee: {
+      h: "Licensee"
+      n: "licensee"
+      r: true
+      t: "`$STRING`"
+    }
+    licenseeIds: {
+      h: "Licensee Ids"
+      n: "licenseeIds"
+      r: true
+      t: "`$ARRAY`"
+    }
+    licensor: {
+      h: "Licensor"
+      n: "licensor"
+      r: true
+      t: "`$STRING`"
+    }
+    licensorId: {
+      h: "Licensor Id"
+      n: "licensorId"
+      r: true
+      t: "`$STRING`"
+    }
+    licensorType: {
+      h: "Licensor Type"
+      n: "licensorType"
+      r: true
+      t: "`$STRING`"
+    }
+    metric: {
+      h: "Metric"
+      n: "metric"
+      r: true
+      t: "`$STRING`"
+    }
+    party: {
+      h: "Party"
+      n: "party"
+      r: true
+      t: "`$STRING`"
+    }
+    partyId: {
+      h: "Party Id"
+      n: "partyId"
+      r: true
+      t: "`$STRING`"
+    }
+    period: {
+      h: "Period"
+      n: "period"
+      r: true
+      t: "`$STRING`"
+    }
+    periodEnd: {
+      h: "Period End"
+      n: "periodEnd"
+      r: true
+      t: "`$STRING`"
+    }
+    quote: {
+      h: "Quote"
+      n: "quote"
+      r: true
+      t: "`$STRING`"
+    }
+    readOn: {
+      h: "Read On"
+      n: "readOn"
+      r: true
+      t: "`$STRING`"
+    }
+    round: {
+      h: "Round"
+      n: "round"
+      r: true
+      t: "`$STRING`"
+    }
+    segment: {
+      h: "Segment"
+      n: "segment"
+      r: true
+      t: "`$STRING`"
+    }
+    source: {
+      h: "Source"
+      n: "source"
+      r: true
+      t: "`$STRING`"
+    }
+    sourceDate: {
+      h: "Source Date"
+      n: "sourceDate"
+      r: true
+      t: "`$STRING`"
+    }
+    sourceLabel: {
+      h: "Source Label"
+      n: "sourceLabel"
+      r: true
+      t: "`$STRING`"
+    }
+    status: {
+      h: "Status"
+      n: "status"
+      r: true
+      t: "`$STRING`"
+    }
+    supersededBy: {
+      h: "Superseded By"
+      n: "supersededBy"
+      r: false
+      t: "`$STRING`"
+    }
+    termYears: {
+      h: "Term Years"
+      n: "termYears"
+      r: true
+      t: "`$INTEGER`"
+    }
+    termsText: {
+      h: "Terms Text"
+      n: "termsText"
+      r: true
+      t: "`$STRING`"
+    }
+    unit: {
+      h: "Unit"
+      n: "unit"
+      r: true
+      t: "`$STRING`"
+    }
+    unitPriceText: {
+      h: "Unit Price Text"
+      n: "unitPriceText"
+      r: true
+      t: "`$STRING`"
+    }
+    url: {
+      h: "Url"
+      n: "url"
+      r: true
+      t: "`$STRING`"
+    }
+    use: {
+      h: "Use"
+      n: "use"
+      r: true
+      sh: "Values seen: both, display/grounding, training, unstated."
+      t: "`$STRING`"
+    }
+    valuationText: {
+      h: "Valuation Text"
+      n: "valuationText"
+      r: true
+      t: "`$STRING`"
+    }
+    valuationUsd: {
+      h: "Valuation Usd"
+      n: "valuationUsd"
+      r: true
+      t: "`$INTEGER`"
+    }
+    valueHighUsd: {
+      h: "Value High Usd"
+      n: "valueHighUsd"
+      r: true
+      t: "`$INTEGER`"
+    }
+    valueLowUsd: {
+      h: "Value Low Usd"
+      n: "valueLowUsd"
+      r: true
+      t: "`$INTEGER`"
+    }
+    valueText: {
+      h: "Value Text"
+      n: "valueText"
+      r: true
+      t: "`$STRING`"
+    }
+    valueUsd: {
+      h: "Value Usd"
+      n: "valueUsd"
+      r: true
+      t: "`$INTEGER`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "market"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /datasets/deals.json"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/datasets/deals.json"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "datasets"
+            }
+            {
+              lit: "deals.json"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /datasets/financials.json"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/datasets/financials.json"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "datasets"
+            }
+            {
+              lit: "financials.json"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /datasets/funding.json"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/datasets/funding.json"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "datasets"
+            }
+            {
+              lit: "funding.json"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /datasets/market-log.json"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/datasets/market-log.json"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "datasets"
+            }
+            {
+              lit: "market-log.json"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /datasets/supply.json"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/datasets/supply.json"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "datasets"
+            }
+            {
+              lit: "supply.json"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

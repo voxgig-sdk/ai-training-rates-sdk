@@ -1,0 +1,2380 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "AI Training Rates (AIData.Broker datasets)",
+    "version": "1.0.0",
+    "description": "Static JSON datasets published by AIData.Broker about the market for AI training data: market rates, price observations, deals, buyers, vendors, lawsuits, funding, revenue and licensing guidance. The catalog entry points at https://aidata.broker/datasets/market-rates.json; the full list of 15 tables comes from https://aidata.broker/llms.txt (section Datasets). Every schema was taken from live GET probes of all 15 JSON files on 2026-10-23 (no key, CORS enabled, cached for an hour). Each response is the same envelope (dataset, description, reviewed, license, rows) around a different row type. The CSV twin of each table (same path with .csv) is not modelled. The tables are reviewed and republished often, so optional fields (marked by absence from required) may come and go; enum-like value lists in descriptions are only what the probe saw. Licence: the compilation is CC BY 4.0; quoted text keeps its sources' terms. Unverified: type of MarketRate.segment (always null in the probe). Large: prices.json is about 1.6 MB.",
+    "contact": {
+      "name": "AIData.Broker",
+      "url": "https://aidata.broker/"
+    },
+    "license": {
+      "name": "CC BY 4.0 (compilation)",
+      "url": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://aidata.broker",
+      "description": "AIData.Broker static datasets"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Prices"
+    },
+    {
+      "name": "Market"
+    },
+    {
+      "name": "Organisations"
+    },
+    {
+      "name": "Legal"
+    },
+    {
+      "name": "Guidance"
+    }
+  ],
+  "paths": {
+    "/datasets/market-rates.json": {
+      "get": {
+        "summary": "Market rates per normalised unit",
+        "description": "Median, middle half and range per normalised unit for each kind of data and side of the market: our arithmetic on the price observations, with the ids behind each. (146 rows in the probe.) The same table is published as CSV at /datasets/market-rates.csv.",
+        "operationId": "listMarketRates",
+        "tags": [
+          "Prices"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "dataset": {
+                      "type": "string",
+                      "description": "Dataset title.",
+                      "example": "AI training data market rates"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "reviewed": {
+                      "type": "string",
+                      "description": "Date the dataset was last reviewed (YYYY-MM-DD).",
+                      "example": "2026-10-22"
+                    },
+                    "license": {
+                      "$ref": "#/components/schemas/License"
+                    },
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/MarketRate"
+                      }
+                    }
+                  },
+                  "required": [
+                    "dataset",
+                    "description",
+                    "reviewed",
+                    "license",
+                    "rows"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/datasets/prices.json": {
+      "get": {
+        "summary": "Price observations",
+        "description": "Every price observation for AI training data: the figure as published, the side of the market, the figure per normalised unit (our arithmetic on the published figure), dates, source and the source's own words. (1264 rows in the probe.) The same table is published as CSV at /datasets/prices.csv.",
+        "operationId": "listPrices",
+        "tags": [
+          "Prices"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "dataset": {
+                      "type": "string",
+                      "description": "Dataset title.",
+                      "example": "AI training data prices"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "reviewed": {
+                      "type": "string",
+                      "description": "Date the dataset was last reviewed (YYYY-MM-DD).",
+                      "example": "2026-10-22"
+                    },
+                    "license": {
+                      "$ref": "#/components/schemas/License"
+                    },
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Price"
+                      }
+                    }
+                  },
+                  "required": [
+                    "dataset",
+                    "description",
+                    "reviewed",
+                    "license",
+                    "rows"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/datasets/negotiation-levers.json": {
+      "get": {
+        "summary": "Negotiation levers",
+        "description": "Negotiation levers for holders and buyers of AI training data, each a quantified fact from the public record with sources, and our reading of what it means in a negotiation (not legal advice). (112 rows in the probe.) The same table is published as CSV at /datasets/negotiation-levers.csv.",
+        "operationId": "listNegotiationLevers",
+        "tags": [
+          "Guidance"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "dataset": {
+                      "type": "string",
+                      "description": "Dataset title.",
+                      "example": "How AI training data prices are negotiated"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "reviewed": {
+                      "type": "string",
+                      "description": "Date the dataset was last reviewed (YYYY-MM-DD).",
+                      "example": "2026-10-22"
+                    },
+                    "license": {
+                      "$ref": "#/components/schemas/License"
+                    },
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/NegotiationLever"
+                      }
+                    }
+                  },
+                  "required": [
+                    "dataset",
+                    "description",
+                    "reviewed",
+                    "license",
+                    "rows"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/datasets/supply.json": {
+      "get": {
+        "summary": "Where AI training data comes from",
+        "description": "Quantified facts about the sources of AI training data, by kind of data: who holds it, how much exists and the channel it reaches buyers through. (149 rows in the probe.) The same table is published as CSV at /datasets/supply.csv.",
+        "operationId": "listSupplyFacts",
+        "tags": [
+          "Market"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "dataset": {
+                      "type": "string",
+                      "description": "Dataset title.",
+                      "example": "Where AI training data comes from"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "reviewed": {
+                      "type": "string",
+                      "description": "Date the dataset was last reviewed (YYYY-MM-DD).",
+                      "example": "2026-10-21"
+                    },
+                    "license": {
+                      "$ref": "#/components/schemas/License"
+                    },
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/SupplyFact"
+                      }
+                    }
+                  },
+                  "required": [
+                    "dataset",
+                    "description",
+                    "reviewed",
+                    "license",
+                    "rows"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/datasets/deals.json": {
+      "get": {
+        "summary": "Disclosed data licensing deals",
+        "description": "Disclosed licences of data to AI companies since July 2023: licensor, licensee, content, use, term, value where disclosed, source. (128 rows in the probe.) The same table is published as CSV at /datasets/deals.csv.",
+        "operationId": "listDeals",
+        "tags": [
+          "Market"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "dataset": {
+                      "type": "string",
+                      "description": "Dataset title.",
+                      "example": "AI data licensing deals"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "reviewed": {
+                      "type": "string",
+                      "description": "Date the dataset was last reviewed (YYYY-MM-DD).",
+                      "example": "2026-10-21"
+                    },
+                    "license": {
+                      "$ref": "#/components/schemas/License"
+                    },
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Deal"
+                      }
+                    }
+                  },
+                  "required": [
+                    "dataset",
+                    "description",
+                    "reviewed",
+                    "license",
+                    "rows"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/datasets/buyers.json": {
+      "get": {
+        "summary": "Buyers of AI training data",
+        "description": "Organisations with a public way to sell them data: what each buys, its published prices, eligibility, payment terms and introduction fees. (41 rows in the probe.) The same table is published as CSV at /datasets/buyers.csv.",
+        "operationId": "listBuyers",
+        "tags": [
+          "Organisations"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "dataset": {
+                      "type": "string",
+                      "description": "Dataset title.",
+                      "example": "Buyers of AI training data"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "reviewed": {
+                      "type": "string",
+                      "description": "Date the dataset was last reviewed (YYYY-MM-DD).",
+                      "example": "2026-10-22"
+                    },
+                    "license": {
+                      "$ref": "#/components/schemas/License"
+                    },
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Buyer"
+                      }
+                    }
+                  },
+                  "required": [
+                    "dataset",
+                    "description",
+                    "reviewed",
+                    "license",
+                    "rows"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/datasets/vendors.json": {
+      "get": {
+        "summary": "AI training data vendors",
+        "description": "Companies that sell training data, RL environments, evaluations, expert work or annotation to AI developers: what each says it sells, the areas it works in and where its data comes from, each with the vendor's own words and the page they are on. (150 rows in the probe.) The same table is published as CSV at /datasets/vendors.csv.",
+        "operationId": "listVendors",
+        "tags": [
+          "Organisations"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "dataset": {
+                      "type": "string",
+                      "description": "Dataset title.",
+                      "example": "AI training data vendors"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "reviewed": {
+                      "type": "string",
+                      "description": "Date the dataset was last reviewed (YYYY-MM-DD).",
+                      "example": "2026-10-15"
+                    },
+                    "license": {
+                      "$ref": "#/components/schemas/License"
+                    },
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Vendor"
+                      }
+                    }
+                  },
+                  "required": [
+                    "dataset",
+                    "description",
+                    "reviewed",
+                    "license",
+                    "rows"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/datasets/cases.json": {
+      "get": {
+        "summary": "Lawsuits and rulings over AI training data",
+        "description": "Lawsuits, rulings, settlements and regulatory actions over data used to train AI, with outcome and source. (106 rows in the probe.) The same table is published as CSV at /datasets/cases.csv.",
+        "operationId": "listLegalCases",
+        "tags": [
+          "Legal"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "dataset": {
+                      "type": "string",
+                      "description": "Dataset title.",
+                      "example": "Lawsuits and rulings over AI training data"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "reviewed": {
+                      "type": "string",
+                      "description": "Date the dataset was last reviewed (YYYY-MM-DD).",
+                      "example": "2026-10-22"
+                    },
+                    "license": {
+                      "$ref": "#/components/schemas/License"
+                    },
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/LegalCase"
+                      }
+                    }
+                  },
+                  "required": [
+                    "dataset",
+                    "description",
+                    "reviewed",
+                    "license",
+                    "rows"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/datasets/funding.json": {
+      "get": {
+        "summary": "Funding of AI data companies",
+        "description": "Funding rounds, acquisitions and valuations of companies that buy, make or broker AI training data. (124 rows in the probe.) The same table is published as CSV at /datasets/funding.csv.",
+        "operationId": "listFundingEvents",
+        "tags": [
+          "Market"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "dataset": {
+                      "type": "string",
+                      "description": "Dataset title.",
+                      "example": "Funding of AI data companies"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "reviewed": {
+                      "type": "string",
+                      "description": "Date the dataset was last reviewed (YYYY-MM-DD).",
+                      "example": "2026-10-22"
+                    },
+                    "license": {
+                      "$ref": "#/components/schemas/License"
+                    },
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/FundingEvent"
+                      }
+                    }
+                  },
+                  "required": [
+                    "dataset",
+                    "description",
+                    "reviewed",
+                    "license",
+                    "rows"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/datasets/financials.json": {
+      "get": {
+        "summary": "Revenue of AI data companies",
+        "description": "Revenue, run rates and ARR of data and expert-work vendors to AI labs, as published. (263 rows in the probe.) The same table is published as CSV at /datasets/financials.csv.",
+        "operationId": "listFinancialFigures",
+        "tags": [
+          "Market"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "dataset": {
+                      "type": "string",
+                      "description": "Dataset title.",
+                      "example": "Revenue of AI data companies"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "reviewed": {
+                      "type": "string",
+                      "description": "Date the dataset was last reviewed (YYYY-MM-DD).",
+                      "example": "2026-10-22"
+                    },
+                    "license": {
+                      "$ref": "#/components/schemas/License"
+                    },
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/FinancialFigure"
+                      }
+                    }
+                  },
+                  "required": [
+                    "dataset",
+                    "description",
+                    "reviewed",
+                    "license",
+                    "rows"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/datasets/market-log.json": {
+      "get": {
+        "summary": "AI data brokerage log",
+        "description": "Dated records of buyer programs, transactions, price ranges, referral terms and broker economics in company-data sales. (128 rows in the probe.) The same table is published as CSV at /datasets/market-log.csv.",
+        "operationId": "listMarketLogEntries",
+        "tags": [
+          "Market"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "dataset": {
+                      "type": "string",
+                      "description": "Dataset title.",
+                      "example": "AI data brokerage log"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "reviewed": {
+                      "type": "string",
+                      "description": "Date the dataset was last reviewed (YYYY-MM-DD).",
+                      "example": "2026-10-22"
+                    },
+                    "license": {
+                      "$ref": "#/components/schemas/License"
+                    },
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/MarketLogEntry"
+                      }
+                    }
+                  },
+                  "required": [
+                    "dataset",
+                    "description",
+                    "reviewed",
+                    "license",
+                    "rows"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/datasets/software-terms.json": {
+      "get": {
+        "summary": "What software terms allow for AI training data",
+        "description": "For each business system on file: whether the holder can export its data, what the vendor's API terms say about training AI on data pulled through them, and our reading of the rights risk of the content (not legal advice), with quotes. (18 rows in the probe.) The same table is published as CSV at /datasets/software-terms.csv.",
+        "operationId": "listSoftwareTerms",
+        "tags": [
+          "Legal"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "dataset": {
+                      "type": "string",
+                      "description": "Dataset title.",
+                      "example": "What software terms allow for AI training data"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "reviewed": {
+                      "type": "string",
+                      "description": "Date the dataset was last reviewed (YYYY-MM-DD).",
+                      "example": "2026-10-11"
+                    },
+                    "license": {
+                      "$ref": "#/components/schemas/License"
+                    },
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/SoftwareTerm"
+                      }
+                    }
+                  },
+                  "required": [
+                    "dataset",
+                    "description",
+                    "reviewed",
+                    "license",
+                    "rows"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/datasets/rights-checks.json": {
+      "get": {
+        "summary": "Rights checklist for selling data",
+        "description": "The questions a buyer's counsel asks before licensing data: good answers, red flags, the kinds of data each applies to and, on our reading (not legal advice), whether it blocks a sale, with sources. (27 rows in the probe.) The same table is published as CSV at /datasets/rights-checks.csv.",
+        "operationId": "listRightsChecks",
+        "tags": [
+          "Legal"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "dataset": {
+                      "type": "string",
+                      "description": "Dataset title.",
+                      "example": "Rights checklist for selling data for AI training"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "reviewed": {
+                      "type": "string",
+                      "description": "Date the dataset was last reviewed (YYYY-MM-DD).",
+                      "example": "2026-10-11"
+                    },
+                    "license": {
+                      "$ref": "#/components/schemas/License"
+                    },
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/RightsCheck"
+                      }
+                    }
+                  },
+                  "required": [
+                    "dataset",
+                    "description",
+                    "reviewed",
+                    "license",
+                    "rows"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/datasets/licence-terms.json": {
+      "get": {
+        "summary": "Terms of an AI training data licence",
+        "description": "The terms a data licence for AI training turns on: what buyers ask, where a holder may want to stand (our reading, not legal advice), the public evidence and its gaps. (15 rows in the probe.) The same table is published as CSV at /datasets/licence-terms.csv.",
+        "operationId": "listLicenceTerms",
+        "tags": [
+          "Legal"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "dataset": {
+                      "type": "string",
+                      "description": "Dataset title.",
+                      "example": "Terms of an AI training data licence"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "reviewed": {
+                      "type": "string",
+                      "description": "Date the dataset was last reviewed (YYYY-MM-DD).",
+                      "example": "2026-10-11"
+                    },
+                    "license": {
+                      "$ref": "#/components/schemas/License"
+                    },
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/LicenceTerm"
+                      }
+                    }
+                  },
+                  "required": [
+                    "dataset",
+                    "description",
+                    "reviewed",
+                    "license",
+                    "rows"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/datasets/companies.json": {
+      "get": {
+        "summary": "Organisations in the AI data market",
+        "description": "Every organisation the datasets refer to, by id, with kind and description. (622 rows in the probe.) The same table is published as CSV at /datasets/companies.csv.",
+        "operationId": "listCompanies",
+        "tags": [
+          "Organisations"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "dataset": {
+                      "type": "string",
+                      "description": "Dataset title.",
+                      "example": "Organisations in the AI data market"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "reviewed": {
+                      "type": "string",
+                      "description": "Date the dataset was last reviewed (YYYY-MM-DD).",
+                      "example": "2026-10-21"
+                    },
+                    "license": {
+                      "$ref": "#/components/schemas/License"
+                    },
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Company"
+                      }
+                    }
+                  },
+                  "required": [
+                    "dataset",
+                    "description",
+                    "reviewed",
+                    "license",
+                    "rows"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "MarketRate": {
+        "type": "object",
+        "properties": {
+          "group": {
+            "type": "string",
+            "example": "company"
+          },
+          "side": {
+            "type": "string",
+            "description": "Values seen: collection, cost, licence, listing, offer, pay.",
+            "example": "offer"
+          },
+          "unitKey": {
+            "type": "string",
+            "example": "company"
+          },
+          "segment": {
+            "type": "string",
+            "nullable": true,
+            "description": "Always null in the probe; type unverified."
+          },
+          "use": {
+            "type": "string",
+            "nullable": true,
+            "example": "research"
+          },
+          "n": {
+            "type": "integer",
+            "description": "Number of observations."
+          },
+          "open": {
+            "type": "integer",
+            "description": "Number of open-ended observations (no upper bound)."
+          },
+          "median": {
+            "type": "number",
+            "nullable": true
+          },
+          "p25": {
+            "type": "number",
+            "nullable": true
+          },
+          "p75": {
+            "type": "number",
+            "nullable": true
+          },
+          "min": {
+            "type": "number",
+            "nullable": true
+          },
+          "max": {
+            "type": "number",
+            "nullable": true
+          },
+          "from": {
+            "type": "string",
+            "example": "2026-08-13"
+          },
+          "to": {
+            "type": "string",
+            "example": "2026-10-19"
+          },
+          "ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "example": "telegraph-lab-past-deal-accounting-firm-350k"
+            },
+            "description": "Ids of the price observations (listPrices) behind this row."
+          }
+        },
+        "required": [
+          "group",
+          "side",
+          "unitKey",
+          "segment",
+          "use",
+          "n",
+          "open",
+          "median",
+          "p25",
+          "p75",
+          "min",
+          "max",
+          "from",
+          "to",
+          "ids"
+        ],
+        "description": "Median, quartiles and range per normalised unit for one kind of data (group) and side of the market. Statistics are null when too few observations exist."
+      },
+      "Price": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "telegraph-lab-past-deal-accounting-firm-350k"
+          },
+          "group": {
+            "type": "string",
+            "example": "company"
+          },
+          "item": {
+            "type": "string"
+          },
+          "price": {
+            "type": "string",
+            "example": "$350K Paid to the business"
+          },
+          "low": {
+            "type": "number",
+            "nullable": true
+          },
+          "high": {
+            "type": "number",
+            "nullable": true
+          },
+          "unit": {
+            "type": "string",
+            "example": "per company (one 60-person accounting firm)"
+          },
+          "unitKey": {
+            "type": "string",
+            "example": "company"
+          },
+          "perUnitLow": {
+            "type": "number",
+            "nullable": true
+          },
+          "perUnitHigh": {
+            "type": "number",
+            "nullable": true
+          },
+          "perUnitNote": {
+            "type": "string",
+            "example": "One business, so the per-company value is the figure itself."
+          },
+          "segment": {
+            "type": "string",
+            "example": "industry:accounting"
+          },
+          "side": {
+            "type": "string",
+            "description": "Values seen: collection, cost, licence, listing, offer, pay.",
+            "example": "offer"
+          },
+          "date": {
+            "type": "string",
+            "example": "2026-10-19"
+          },
+          "readOn": {
+            "type": "string",
+            "example": "2026-10-19"
+          },
+          "addedOn": {
+            "type": "string",
+            "example": "2026-10-19"
+          },
+          "basis": {
+            "type": "string",
+            "description": "Values seen: docket, listing, reported, stated, vendor.",
+            "example": "stated"
+          },
+          "source": {
+            "type": "string",
+            "example": "https://telegraphlab.com/data-partnerships"
+          },
+          "sourceLabel": {
+            "type": "string",
+            "example": "Telegraph Lab, Data partnerships page, 'Our past data licensing deals'"
+          },
+          "note": {
+            "type": "string"
+          },
+          "quote": {
+            "type": "string"
+          },
+          "orgIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "example": "telegraph-lab"
+            }
+          },
+          "checkWith": {
+            "type": "string",
+            "example": "browser"
+          },
+          "orgNames": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "example": "Scott Painter"
+            }
+          },
+          "use": {
+            "type": "string",
+            "example": "research"
+          },
+          "closedOn": {
+            "type": "string",
+            "example": "2026-10-22"
+          },
+          "currency": {
+            "type": "string",
+            "description": "Values seen: CNY, GBP, JPY, KRW, SGD, TWD.",
+            "example": "CNY"
+          },
+          "feed": {
+            "type": "string",
+            "description": "Values seen: aitraining-jobs-pay, aitraining-jobs-platform-pay.",
+            "example": "aitraining-jobs-platform-pay"
+          }
+        },
+        "required": [
+          "id",
+          "group",
+          "item",
+          "price",
+          "low",
+          "high",
+          "unit",
+          "unitKey",
+          "perUnitLow",
+          "perUnitHigh",
+          "side",
+          "date",
+          "readOn",
+          "addedOn",
+          "basis",
+          "source",
+          "sourceLabel",
+          "note"
+        ],
+        "description": "One published price observation, with the per-unit figure derived by AIData.Broker."
+      },
+      "NegotiationLever": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "competitive-process-doubles-the-opening-bid"
+          },
+          "side": {
+            "type": "string",
+            "description": "Values seen: both, buyer, seller.",
+            "example": "seller"
+          },
+          "lever": {
+            "type": "string",
+            "example": "Run a competitive process, not a bilateral talk"
+          },
+          "finding": {
+            "type": "string"
+          },
+          "howToUse": {
+            "type": "string"
+          },
+          "strength": {
+            "type": "string",
+            "description": "Values seen: indicative, strong.",
+            "example": "strong"
+          },
+          "sources": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SourceQuote"
+            }
+          },
+          "readOn": {
+            "type": "string",
+            "example": "2026-10-11"
+          },
+          "addedOn": {
+            "type": "string",
+            "example": "2026-10-11"
+          }
+        },
+        "required": [
+          "id",
+          "side",
+          "lever",
+          "finding",
+          "howToUse",
+          "strength",
+          "sources",
+          "readOn",
+          "addedOn"
+        ]
+      },
+      "SupplyFact": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "bls-customer-service-reps-2025"
+          },
+          "dataType": {
+            "type": "string",
+            "example": "audio-speech"
+          },
+          "source": {
+            "type": "string",
+            "example": "US contact centres (enterprises and BPOs)"
+          },
+          "fact": {
+            "type": "string"
+          },
+          "figure": {
+            "type": "string",
+            "example": "2,666,000"
+          },
+          "channel": {
+            "type": "string",
+            "example": "Mostly not reaching buyers; recorded calls held by enterprises and BPOs"
+          },
+          "date": {
+            "type": "string",
+            "example": "2026-10-11"
+          },
+          "readOn": {
+            "type": "string",
+            "example": "2026-10-11"
+          },
+          "basis": {
+            "type": "string",
+            "description": "Values seen: docket, listing, reported, stated, vendor.",
+            "example": "stated"
+          },
+          "url": {
+            "type": "string"
+          },
+          "sourceLabel": {
+            "type": "string"
+          },
+          "quote": {
+            "type": "string",
+            "example": "Number of Jobs, 2025 2,666,000"
+          },
+          "addedOn": {
+            "type": "string",
+            "example": "2026-10-11"
+          }
+        },
+        "required": [
+          "id",
+          "dataType",
+          "source",
+          "fact",
+          "figure",
+          "channel",
+          "date",
+          "readOn",
+          "basis",
+          "url",
+          "sourceLabel",
+          "quote",
+          "addedOn"
+        ]
+      },
+      "Deal": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "2025-12-dpcmo-prorata"
+          },
+          "date": {
+            "type": "string",
+            "example": "2025-12-10"
+          },
+          "licensor": {
+            "type": "string"
+          },
+          "licensorId": {
+            "type": "string",
+            "nullable": true,
+            "example": "le-monde"
+          },
+          "licensorType": {
+            "type": "string",
+            "example": "news publisher"
+          },
+          "licensee": {
+            "type": "string",
+            "example": "ProRata (Gist Answers)"
+          },
+          "licenseeIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "example": "prorata"
+            }
+          },
+          "content": {
+            "type": "string"
+          },
+          "use": {
+            "type": "string",
+            "description": "Values seen: both, display/grounding, training, unstated.",
+            "example": "display/grounding"
+          },
+          "termYears": {
+            "type": "integer",
+            "nullable": true
+          },
+          "valueUsd": {
+            "type": "integer",
+            "nullable": true
+          },
+          "annualUsd": {
+            "type": "integer",
+            "nullable": true
+          },
+          "valueText": {
+            "type": "string"
+          },
+          "unitPriceText": {
+            "type": "string",
+            "nullable": true,
+            "example": "50% of Gist.AI revenue to publishers, split by attributed use"
+          },
+          "basis": {
+            "type": "string",
+            "description": "Values seen: reported, stated.",
+            "example": "stated"
+          },
+          "source": {
+            "type": "string"
+          },
+          "sourceLabel": {
+            "type": "string",
+            "example": "DPCMO (joint announcement with ProRata)"
+          },
+          "sourceDate": {
+            "type": "string",
+            "example": "2025-12-10"
+          },
+          "quote": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "date",
+          "licensor",
+          "licensorId",
+          "licensorType",
+          "licensee",
+          "licenseeIds",
+          "content",
+          "use",
+          "termYears",
+          "valueUsd",
+          "annualUsd",
+          "valueText",
+          "unitPriceText",
+          "basis",
+          "source",
+          "sourceLabel",
+          "sourceDate",
+          "quote"
+        ]
+      },
+      "Buyer": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "micro1"
+          },
+          "proof": {
+            "type": "object",
+            "properties": {
+              "level": {
+                "type": "string",
+                "example": "others"
+              },
+              "records": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "example": "2026-09-micro1-transaction-2"
+                }
+              }
+            },
+            "required": [
+              "level",
+              "records"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "example": "micro1"
+          },
+          "domain": {
+            "type": "string",
+            "example": "micro1.ai"
+          },
+          "kind": {
+            "type": "string",
+            "description": "Values seen: broker, collector, marketplace, principal, wind-down.",
+            "example": "principal"
+          },
+          "what": {
+            "type": "string"
+          },
+          "wants": {
+            "type": "string"
+          },
+          "pays": {
+            "type": "string",
+            "nullable": true
+          },
+          "low": {
+            "type": "integer",
+            "nullable": true
+          },
+          "high": {
+            "type": "integer",
+            "nullable": true
+          },
+          "paidWhen": {
+            "type": "string",
+            "nullable": true,
+            "example": "Not published."
+          },
+          "scrub": {
+            "type": "string",
+            "nullable": true
+          },
+          "deidentifiedBy": {
+            "type": "string",
+            "example": "buyer"
+          },
+          "criteria": {
+            "type": "object",
+            "properties": {
+              "statuses": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "description": "Values seen: closed, closing, operating.",
+                  "example": "operating"
+                }
+              },
+              "minEmployees": {
+                "type": "integer"
+              },
+              "closedTrackMinEmployees": {
+                "type": "integer"
+              },
+              "regions": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "description": "Values seen: eu, other-english, uk-ca, us.",
+                  "example": "us"
+                }
+              },
+              "english": {
+                "type": "boolean"
+              },
+              "minYears": {
+                "type": "integer"
+              },
+              "industries": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "example": "Legal"
+                }
+              },
+              "code": {
+                "type": "object",
+                "properties": {
+                  "minLinesPerRepo": {
+                    "type": "integer"
+                  },
+                  "humanWritten": {
+                    "type": "boolean"
+                  },
+                  "withTests": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "humanWritten"
+                ]
+              }
+            },
+            "description": "Eligibility criteria as published by the buyer; every key is optional."
+          },
+          "eligibility": {
+            "type": "string"
+          },
+          "takes": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "example": "company-records"
+            }
+          },
+          "introducerFee": {
+            "type": "string",
+            "nullable": true
+          },
+          "introducerTerms": {
+            "type": "object",
+            "properties": {
+              "rate": {
+                "type": "number"
+              },
+              "cap": {
+                "type": "integer"
+              },
+              "flat": {
+                "type": "integer"
+              },
+              "upTo": {
+                "type": "boolean"
+              },
+              "onTop": {
+                "type": "boolean"
+              },
+              "greaterOf": {
+                "type": "boolean"
+              }
+            },
+            "description": "Structured introducer (referral) fee terms: rate is a fraction, cap and flat are USD."
+          },
+          "record": {
+            "type": "object",
+            "properties": {
+              "tier": {
+                "type": "string",
+                "description": "Values seen: confirmed, own-claims, partial.",
+                "example": "confirmed"
+              },
+              "says": {
+                "type": "string"
+              },
+              "source": {
+                "type": "string",
+                "example": "https://www.micro1.ai/blog/q3"
+              },
+              "readOn": {
+                "type": "string",
+                "example": "2026-10-16"
+              }
+            },
+            "required": [
+              "tier",
+              "says",
+              "source",
+              "readOn"
+            ]
+          },
+          "basis": {
+            "type": "string",
+            "description": "Values seen: reported, stated.",
+            "example": "stated"
+          },
+          "source": {
+            "type": "string",
+            "example": "https://www.micro1.ai/data-partnerships"
+          },
+          "sourceLabel": {
+            "type": "string",
+            "example": "micro1, data partnerships page"
+          },
+          "readOn": {
+            "type": "string",
+            "example": "2026-10-22"
+          },
+          "paidInDays": {
+            "type": "integer"
+          },
+          "aka": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "example": "Handshake"
+            }
+          },
+          "otherDomains": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "example": "mode.inc"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "domain",
+          "kind",
+          "what",
+          "wants",
+          "pays",
+          "low",
+          "high",
+          "paidWhen",
+          "scrub",
+          "criteria",
+          "eligibility",
+          "takes",
+          "introducerFee",
+          "basis",
+          "source",
+          "sourceLabel",
+          "readOn"
+        ]
+      },
+      "Vendor": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "6thsense"
+          },
+          "name": {
+            "type": "string",
+            "example": "6thSense"
+          },
+          "website": {
+            "type": "string",
+            "example": "https://6thsense.dev/"
+          },
+          "what": {
+            "type": "string"
+          },
+          "says": {
+            "$ref": "#/components/schemas/VendorQuote"
+          },
+          "sells": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VendorOffering"
+            }
+          },
+          "areas": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "example": "robotics"
+            }
+          },
+          "madeFrom": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VendorOffering"
+            }
+          },
+          "buysData": {
+            "$ref": "#/components/schemas/VendorQuote"
+          },
+          "hq": {
+            "type": "object",
+            "nullable": true,
+            "properties": {
+              "value": {
+                "type": "string",
+                "example": "San Francisco, CA"
+              },
+              "quote": {
+                "type": "string",
+                "example": "Based in San Francisco, CA."
+              },
+              "url": {
+                "type": "string",
+                "example": "https://www.ycombinator.com/companies/abundant"
+              }
+            },
+            "required": [
+              "value",
+              "quote",
+              "url"
+            ]
+          },
+          "founded": {
+            "type": "object",
+            "nullable": true,
+            "properties": {
+              "value": {
+                "type": "integer"
+              },
+              "quote": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string",
+                "example": "https://www.ycombinator.com/companies/abundant"
+              }
+            },
+            "required": [
+              "value",
+              "quote",
+              "url"
+            ]
+          },
+          "readOn": {
+            "type": "string",
+            "example": "2026-10-15"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "website",
+          "what",
+          "says",
+          "sells",
+          "areas",
+          "madeFrom",
+          "buysData",
+          "hq",
+          "founded",
+          "readOn"
+        ]
+      },
+      "LegalCase": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "2026-10-reservoir-media-v-anthropic-lyrics-lawsuit-filed"
+          },
+          "date": {
+            "type": "string",
+            "example": "2026-10-21"
+          },
+          "jurisdiction": {
+            "type": "string",
+            "example": "US federal (N.D. Cal.)"
+          },
+          "kind": {
+            "type": "string",
+            "description": "Values seen: guidance, lawsuit, regulatory action, ruling, settlement.",
+            "example": "lawsuit"
+          },
+          "title": {
+            "type": "string"
+          },
+          "parties": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "example": "Reservoir Media Management, Inc."
+            }
+          },
+          "defendantIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "example": "anthropic"
+            }
+          },
+          "partyIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "example": "reservoir-media"
+            }
+          },
+          "contentType": {
+            "type": "string",
+            "example": "music (song lyrics)"
+          },
+          "claim": {
+            "type": "string",
+            "example": "copyright"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "amountUsd": {
+            "type": "integer",
+            "nullable": true
+          },
+          "amountText": {
+            "type": "string",
+            "nullable": true
+          },
+          "perWorkText": {
+            "type": "string",
+            "nullable": true,
+            "example": "up to $150,000 per work willfully infringed (statutory maximum sought)"
+          },
+          "outcome": {
+            "type": "string",
+            "nullable": true,
+            "example": "Civil penalty of $25 billion ordered; Meta says it will appeal."
+          },
+          "statusAsOf": {
+            "type": "string",
+            "example": "2026-10-21"
+          },
+          "caseNumber": {
+            "type": "string",
+            "nullable": true,
+            "example": "5:26-cv-12308"
+          },
+          "basis": {
+            "type": "string",
+            "description": "Values seen: reported, stated.",
+            "example": "stated"
+          },
+          "source": {
+            "type": "string"
+          },
+          "sourceLabel": {
+            "type": "string"
+          },
+          "sourceDate": {
+            "type": "string",
+            "example": "2026-10-21"
+          },
+          "quote": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "date",
+          "jurisdiction",
+          "kind",
+          "title",
+          "parties",
+          "defendantIds",
+          "partyIds",
+          "contentType",
+          "claim",
+          "summary",
+          "amountUsd",
+          "amountText",
+          "perWorkText",
+          "outcome",
+          "statusAsOf",
+          "caseNumber",
+          "basis",
+          "source",
+          "sourceLabel",
+          "sourceDate",
+          "quote"
+        ]
+      },
+      "FundingEvent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "2026-10-thirdspace-mecka-ai-acquisition"
+          },
+          "date": {
+            "type": "string",
+            "example": "2026-10-19"
+          },
+          "company": {
+            "type": "string",
+            "example": "Thirdspace"
+          },
+          "companyId": {
+            "type": "string",
+            "example": "thirdspace"
+          },
+          "event": {
+            "type": "string",
+            "description": "Values seen: acquisition, financing, funding, investment, secondary, valuation.",
+            "example": "acquisition"
+          },
+          "status": {
+            "type": "string",
+            "example": "completed"
+          },
+          "round": {
+            "type": "string",
+            "nullable": true,
+            "example": "Series B (Sequoia-led; terms then not final)"
+          },
+          "amountUsd": {
+            "type": "integer",
+            "nullable": true
+          },
+          "amountText": {
+            "type": "string",
+            "nullable": true
+          },
+          "valuationUsd": {
+            "type": "integer",
+            "nullable": true
+          },
+          "valuationText": {
+            "type": "string",
+            "nullable": true
+          },
+          "leadInvestors": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "example": "Sequoia Capital"
+            }
+          },
+          "acquirer": {
+            "type": "string",
+            "nullable": true,
+            "example": "Mecka AI"
+          },
+          "basis": {
+            "type": "string",
+            "description": "Values seen: reported, self-reported, stated.",
+            "example": "reported"
+          },
+          "source": {
+            "type": "string"
+          },
+          "sourceLabel": {
+            "type": "string",
+            "example": "BetaKit"
+          },
+          "sourceDate": {
+            "type": "string",
+            "example": "2026-10-19"
+          },
+          "quote": {
+            "type": "string"
+          },
+          "supersededBy": {
+            "type": "string",
+            "example": "2026-10-mecka-ai-series-b"
+          }
+        },
+        "required": [
+          "id",
+          "date",
+          "company",
+          "companyId",
+          "event",
+          "status",
+          "round",
+          "amountUsd",
+          "amountText",
+          "valuationUsd",
+          "valuationText",
+          "leadInvestors",
+          "acquirer",
+          "basis",
+          "source",
+          "sourceLabel",
+          "sourceDate",
+          "quote"
+        ]
+      },
+      "FinancialFigure": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "appen-fy2026-guidance"
+          },
+          "company": {
+            "type": "string",
+            "example": "Appen"
+          },
+          "companyId": {
+            "type": "string",
+            "example": "appen"
+          },
+          "period": {
+            "type": "string",
+            "example": "FY2026"
+          },
+          "periodEnd": {
+            "type": "string",
+            "example": "2026-12-31"
+          },
+          "metric": {
+            "type": "string",
+            "example": "guidance"
+          },
+          "segment": {
+            "type": "string",
+            "nullable": true,
+            "example": "Appen China"
+          },
+          "valueUsd": {
+            "type": "integer",
+            "nullable": true
+          },
+          "valueText": {
+            "type": "string"
+          },
+          "basis": {
+            "type": "string",
+            "description": "Values seen: reported, self-reported, stated.",
+            "example": "stated"
+          },
+          "source": {
+            "type": "string",
+            "example": "https://announcements.asx.com.au/asxpdf/20260827/pdf/0739d4q7lyh3w2.pdf"
+          },
+          "sourceLabel": {
+            "type": "string",
+            "example": "ASX announcement, H1 FY26 results (Appen)"
+          },
+          "sourceDate": {
+            "type": "string",
+            "example": "2026-08-27"
+          },
+          "quote": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "company",
+          "companyId",
+          "period",
+          "periodEnd",
+          "metric",
+          "segment",
+          "valueUsd",
+          "valueText",
+          "basis",
+          "source",
+          "sourceLabel",
+          "sourceDate",
+          "quote"
+        ]
+      },
+      "MarketLogEntry": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "2026-10-humxn-free-home-service-program-pays-for-recorded-service-calls"
+          },
+          "date": {
+            "type": "string",
+            "example": "2026-10-06"
+          },
+          "kind": {
+            "type": "string",
+            "description": "Values seen: broker economics, buyer program, intermediary, legal or policy, price range, referral terms, transaction.",
+            "example": "buyer program"
+          },
+          "party": {
+            "type": "string",
+            "example": "HUMXN Research Labs"
+          },
+          "partyId": {
+            "type": "string",
+            "nullable": true,
+            "example": "humxn"
+          },
+          "counterparty": {
+            "type": "string",
+            "nullable": true
+          },
+          "dataType": {
+            "type": "string"
+          },
+          "valueUsd": {
+            "type": "number",
+            "nullable": true
+          },
+          "valueLowUsd": {
+            "type": "integer",
+            "nullable": true
+          },
+          "valueHighUsd": {
+            "type": "integer",
+            "nullable": true
+          },
+          "unit": {
+            "type": "string",
+            "nullable": true,
+            "example": "payment in kind: the service appointment itself"
+          },
+          "valueText": {
+            "type": "string",
+            "nullable": true
+          },
+          "termsText": {
+            "type": "string"
+          },
+          "basis": {
+            "type": "string",
+            "description": "Values seen: reported, self-reported, stated.",
+            "example": "self-reported"
+          },
+          "source": {
+            "type": "string",
+            "example": "https://humxn.io/humxn-launches-free-home-service-program"
+          },
+          "sourceLabel": {
+            "type": "string",
+            "example": "HUMXN journal (press release)"
+          },
+          "sourceDate": {
+            "type": "string",
+            "example": "2026-10-06"
+          },
+          "quote": {
+            "type": "string"
+          },
+          "checkWith": {
+            "type": "string",
+            "example": "browser"
+          },
+          "supersededBy": {
+            "type": "string",
+            "example": "2026-10-ooak-data-buyer-program-2"
+          }
+        },
+        "required": [
+          "id",
+          "date",
+          "kind",
+          "party",
+          "partyId",
+          "counterparty",
+          "dataType",
+          "valueUsd",
+          "valueLowUsd",
+          "valueHighUsd",
+          "unit",
+          "valueText",
+          "termsText",
+          "basis",
+          "source",
+          "sourceLabel",
+          "sourceDate",
+          "quote"
+        ]
+      },
+      "SoftwareTerm": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "slack"
+          },
+          "name": {
+            "type": "string",
+            "example": "Slack (Salesforce)"
+          },
+          "exportAllowed": {
+            "type": "string",
+            "description": "Values seen: limited, unclear, yes.",
+            "example": "limited"
+          },
+          "exportRule": {
+            "type": "string"
+          },
+          "apiRule": {
+            "type": "string"
+          },
+          "byPlan": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          },
+          "apiLimit": {
+            "type": "string",
+            "description": "Values seen: bars-ai-training, bars-copying, none-found, unclear.",
+            "example": "bars-ai-training"
+          },
+          "risk": {
+            "type": "string",
+            "description": "Values seen: high, low, medium.",
+            "example": "high"
+          },
+          "sources": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SourceQuote"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "exportAllowed",
+          "exportRule",
+          "apiRule",
+          "byPlan",
+          "notes",
+          "apiLimit",
+          "risk",
+          "sources"
+        ]
+      },
+      "RightsCheck": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "authority-to-sell"
+          },
+          "question": {
+            "type": "string"
+          },
+          "why": {
+            "type": "string"
+          },
+          "good": {
+            "type": "string"
+          },
+          "redFlag": {
+            "type": "string"
+          },
+          "appliesTo": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "example": "company-records"
+            }
+          },
+          "severity": {
+            "type": "string",
+            "description": "Values seen: blocker, fixable, note.",
+            "example": "blocker"
+          },
+          "inference": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "sources": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SourceQuote"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "question",
+          "why",
+          "good",
+          "redFlag",
+          "appliesTo",
+          "severity",
+          "inference",
+          "status",
+          "sources"
+        ]
+      },
+      "LicenceTerm": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "scope-field-of-use"
+          },
+          "term": {
+            "type": "string",
+            "example": "Licensed purpose and field of use"
+          },
+          "buyersAsk": {
+            "type": "string"
+          },
+          "sellerPosition": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "string"
+          },
+          "gap": {
+            "type": "string",
+            "nullable": true
+          },
+          "sources": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SourceQuote"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "term",
+          "buyersAsk",
+          "sellerPosition",
+          "evidence",
+          "gap",
+          "sources"
+        ]
+      },
+      "Company": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "1x-technologies"
+          },
+          "name": {
+            "type": "string",
+            "example": "1X Technologies"
+          },
+          "kind": {
+            "type": "string",
+            "example": "ai-company"
+          },
+          "domain": {
+            "type": "string",
+            "nullable": true,
+            "example": "1x.tech"
+          },
+          "what": {
+            "type": "string",
+            "nullable": true,
+            "example": "A humanoid robot maker that employs teleoperators to collect training data."
+          },
+          "whatSource": {
+            "type": "string",
+            "nullable": true,
+            "example": "https://6thsense.dev/"
+          },
+          "hq": {
+            "type": "string",
+            "nullable": true,
+            "example": "San Francisco, CA"
+          },
+          "founded": {
+            "type": "integer",
+            "nullable": true
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "kind",
+          "domain",
+          "what",
+          "whatSource",
+          "hq",
+          "founded"
+        ],
+        "description": "An organisation referred to by the other tables (orgIds, companyId, licenseeIds and similar fields hold these ids)."
+      },
+      "License": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "CC BY 4.0"
+          },
+          "url": {
+            "type": "string",
+            "example": "https://creativecommons.org/licenses/by/4.0/"
+          },
+          "covers": {
+            "type": "string",
+            "example": "our compilation of the tables"
+          },
+          "excludes": {
+            "type": "string",
+            "example": "quotes keep their sources' terms, and article text is not covered"
+          }
+        },
+        "required": [
+          "name",
+          "url",
+          "covers",
+          "excludes"
+        ]
+      },
+      "SourceQuote": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string",
+            "example": "2026-09-13"
+          },
+          "quote": {
+            "type": "string"
+          },
+          "checkWith": {
+            "type": "string",
+            "example": "browser"
+          }
+        },
+        "required": [
+          "title",
+          "url",
+          "date",
+          "quote"
+        ],
+        "description": "A cited source with the quoted passage."
+      },
+      "VendorQuote": {
+        "type": "object",
+        "properties": {
+          "quote": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "example": "https://6thsense.dev/"
+          }
+        },
+        "required": [
+          "quote",
+          "url"
+        ],
+        "description": "The vendor's own words and the page they are on."
+      },
+      "VendorOffering": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "type": "string",
+            "example": "datasets"
+          },
+          "quote": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "example": "https://6thsense.dev/privacy"
+          }
+        },
+        "required": [
+          "kind",
+          "quote",
+          "url"
+        ]
+      }
+    }
+  }
+}

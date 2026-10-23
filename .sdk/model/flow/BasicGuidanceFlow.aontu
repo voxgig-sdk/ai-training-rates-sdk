@@ -1,0 +1,22 @@
+# BasicGuidanceFlow
+
+main: kit: flow: BasicGuidanceFlow:
+{
+  entity: "guidance",
+  kind: "basic",
+  name: "BasicGuidanceFlow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "guidance_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicGuidanceFlow"
+}

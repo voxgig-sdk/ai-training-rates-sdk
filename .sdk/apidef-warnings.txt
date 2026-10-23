@@ -1,0 +1,56 @@
+{
+  point: "warning"
+  note: "Points GET /datasets/cases.json, GET /datasets/licence-terms.json, GET /datasets/rights-checks.json and GET /datasets/software-terms.json on entity=legal op=list have the same selector (exist: none), so only GET /datasets/cases.json is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "legal"
+  op: "list"
+  points: [
+    "GET /datasets/cases.json"
+    "GET /datasets/licence-terms.json"
+    "GET /datasets/rights-checks.json"
+    "GET /datasets/software-terms.json"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points GET /datasets/deals.json, GET /datasets/financials.json, GET /datasets/funding.json, GET /datasets/market-log.json and GET /datasets/supply.json on entity=market op=list have the same selector (exist: none), so only GET /datasets/deals.json is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "market"
+  op: "list"
+  points: [
+    "GET /datasets/deals.json"
+    "GET /datasets/financials.json"
+    "GET /datasets/funding.json"
+    "GET /datasets/market-log.json"
+    "GET /datasets/supply.json"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points GET /datasets/buyers.json, GET /datasets/companies.json and GET /datasets/vendors.json on entity=organisation op=list have the same selector (exist: none), so only GET /datasets/buyers.json is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "organisation"
+  op: "list"
+  points: [
+    "GET /datasets/buyers.json"
+    "GET /datasets/companies.json"
+    "GET /datasets/vendors.json"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points GET /datasets/market-rates.json and GET /datasets/prices.json on entity=price op=list have the same selector (exist: none), so only GET /datasets/market-rates.json is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "price"
+  op: "list"
+  points: [
+    "GET /datasets/market-rates.json"
+    "GET /datasets/prices.json"
+  ]
+
+}

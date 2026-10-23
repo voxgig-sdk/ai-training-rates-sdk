@@ -1,0 +1,22 @@
+# BasicLegalFlow
+
+main: kit: flow: BasicLegalFlow:
+{
+  entity: "legal",
+  kind: "basic",
+  name: "BasicLegalFlow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "legal_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicLegalFlow"
+}

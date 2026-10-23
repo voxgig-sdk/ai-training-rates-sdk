@@ -1,0 +1,324 @@
+# Entity: price
+
+main: kit: entity: price: {
+
+  alias: field: {}
+
+  fields: {
+    addedOn: {
+      h: "Added On"
+      n: "addedOn"
+      r: true
+      t: "`$STRING`"
+    }
+    basis: {
+      h: "Basis"
+      n: "basis"
+      r: true
+      sh: "Values seen: docket, listing, reported, stated, vendor."
+      t: "`$STRING`"
+    }
+    checkWith: {
+      h: "Check With"
+      n: "checkWith"
+      r: false
+      t: "`$STRING`"
+    }
+    closedOn: {
+      h: "Closed On"
+      n: "closedOn"
+      r: false
+      t: "`$STRING`"
+    }
+    currency: {
+      h: "Currency"
+      n: "currency"
+      r: false
+      sh: "Values seen: CNY, GBP, JPY, KRW, SGD, TWD."
+      t: "`$STRING`"
+    }
+    date: {
+      h: "Date"
+      n: "date"
+      r: true
+      t: "`$STRING`"
+    }
+    feed: {
+      h: "Feed"
+      n: "feed"
+      r: false
+      sh: "Values seen: aitraining-jobs-pay, aitraining-jobs-platform-pay."
+      t: "`$STRING`"
+    }
+    from: {
+      h: "From"
+      n: "from"
+      r: true
+      t: "`$STRING`"
+    }
+    group: {
+      h: "Group"
+      n: "group"
+      r: true
+      t: "`$STRING`"
+    }
+    high: {
+      h: "High"
+      n: "high"
+      r: true
+      t: "`$NUMBER`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: true
+      t: "`$STRING`"
+    }
+    ids: {
+      h: "Ids"
+      n: "ids"
+      r: true
+      sh: "Ids of the price observations (listPrices) behind this row."
+      t: "`$ARRAY`"
+    }
+    item: {
+      h: "Item"
+      n: "item"
+      r: true
+      t: "`$STRING`"
+    }
+    low: {
+      h: "Low"
+      n: "low"
+      r: true
+      t: "`$NUMBER`"
+    }
+    max: {
+      h: "Max"
+      n: "max"
+      r: true
+      t: "`$NUMBER`"
+    }
+    median: {
+      h: "Median"
+      n: "median"
+      r: true
+      t: "`$NUMBER`"
+    }
+    min: {
+      h: "Min"
+      n: "min"
+      r: true
+      t: "`$NUMBER`"
+    }
+    n: {
+      h: "N"
+      n: "n"
+      r: true
+      sh: "Number of observations."
+      t: "`$INTEGER`"
+    }
+    note: {
+      h: "Note"
+      n: "note"
+      r: true
+      t: "`$STRING`"
+    }
+    open: {
+      h: "Open"
+      n: "open"
+      r: true
+      sh: "Number of open-ended observations (no upper bound)."
+      t: "`$INTEGER`"
+    }
+    orgIds: {
+      h: "Org Ids"
+      n: "orgIds"
+      r: false
+      t: "`$ARRAY`"
+    }
+    orgNames: {
+      h: "Org Names"
+      n: "orgNames"
+      r: false
+      t: "`$ARRAY`"
+    }
+    p25: {
+      h: "P25"
+      n: "p25"
+      r: true
+      t: "`$NUMBER`"
+    }
+    p75: {
+      h: "P75"
+      n: "p75"
+      r: true
+      t: "`$NUMBER`"
+    }
+    perUnitHigh: {
+      h: "Per Unit High"
+      n: "perUnitHigh"
+      r: true
+      t: "`$NUMBER`"
+    }
+    perUnitLow: {
+      h: "Per Unit Low"
+      n: "perUnitLow"
+      r: true
+      t: "`$NUMBER`"
+    }
+    perUnitNote: {
+      h: "Per Unit Note"
+      n: "perUnitNote"
+      r: false
+      t: "`$STRING`"
+    }
+    price: {
+      h: "Price"
+      n: "price"
+      r: true
+      t: "`$STRING`"
+    }
+    quote: {
+      h: "Quote"
+      n: "quote"
+      r: false
+      t: "`$STRING`"
+    }
+    readOn: {
+      h: "Read On"
+      n: "readOn"
+      r: true
+      t: "`$STRING`"
+    }
+    segment: {
+      h: "Segment"
+      n: "segment"
+      op: {
+        list: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      sh: "Always null in the probe; type unverified."
+      t: "`$STRING`"
+    }
+    side: {
+      h: "Side"
+      n: "side"
+      r: true
+      sh: "Values seen: collection, cost, licence, listing, offer, pay."
+      t: "`$STRING`"
+    }
+    source: {
+      h: "Source"
+      n: "source"
+      r: true
+      t: "`$STRING`"
+    }
+    sourceLabel: {
+      h: "Source Label"
+      n: "sourceLabel"
+      r: true
+      t: "`$STRING`"
+    }
+    to: {
+      h: "To"
+      n: "to"
+      r: true
+      t: "`$STRING`"
+    }
+    unit: {
+      h: "Unit"
+      n: "unit"
+      r: true
+      t: "`$STRING`"
+    }
+    unitKey: {
+      h: "Unit Key"
+      n: "unitKey"
+      r: true
+      t: "`$STRING`"
+    }
+    use: {
+      h: "Use"
+      n: "use"
+      op: {
+        list: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "price"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /datasets/market-rates.json"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/datasets/market-rates.json"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "datasets"
+            }
+            {
+              lit: "market-rates.json"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /datasets/prices.json"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/datasets/prices.json"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "datasets"
+            }
+            {
+              lit: "prices.json"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

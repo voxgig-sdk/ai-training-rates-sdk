@@ -1,0 +1,60 @@
+{
+  "existing": {
+    "guidance": {
+      "GUIDANCE00": {
+        "addedOn": "s5a",
+        "finding": "s5b",
+        "howToUse": "s5c",
+        "id": "GUIDANCE00",
+        "lever": "s5e",
+        "readOn": "s5f",
+        "side": "s60",
+        "sources": [],
+        "strength": "s62"
+      },
+      "GUIDANCE01": {
+        "addedOn": "sb4",
+        "finding": "sb5",
+        "howToUse": "sb6",
+        "id": "GUIDANCE01",
+        "lever": "sb8",
+        "readOn": "sb9",
+        "side": "sba",
+        "sources": [],
+        "strength": "sbc"
+      },
+      "GUIDANCE02": {
+        "addedOn": "s10e",
+        "finding": "s10f",
+        "howToUse": "s110",
+        "id": "GUIDANCE02",
+        "lever": "s112",
+        "readOn": "s113",
+        "side": "s114",
+        "sources": [],
+        "strength": "s116"
+      }
+    }
+  },
+  "new": {
+    "guidance": {
+      "guidance_ref01": {
+        "addedOn": "s168",
+        "finding": "s169",
+        "howToUse": "s16a",
+        "lever": "s16c",
+        "readOn": "s16d",
+        "side": "s16e",
+        "sources": [],
+        "strength": "s170"
+      }
+    }
+  },
+  "requests": {
+    "GET /datasets/negotiation-levers.json": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,68 @@
+# AiTrainingRates SDK utility registration
+require_relative '../core/utility_type'
+require_relative 'clean'
+require_relative 'done'
+require_relative 'make_error'
+require_relative 'feature_add'
+require_relative 'feature_hook'
+require_relative 'feature_init'
+require_relative 'fetcher'
+require_relative 'make_fetch_def'
+require_relative 'make_context'
+require_relative 'make_options'
+require_relative 'make_request'
+require_relative 'make_response'
+require_relative 'make_result'
+require_relative 'make_point'
+require_relative 'make_spec'
+require_relative 'make_url'
+require_relative 'param'
+require_relative 'prepare_auth'
+require_relative 'prepare_body'
+require_relative 'prepare_headers'
+require_relative 'prepare_method'
+require_relative 'prepare_params'
+require_relative 'prepare_path'
+require_relative 'prepare_query'
+require_relative 'graphql'
+require_relative 'result_basic'
+require_relative 'result_body'
+require_relative 'result_headers'
+require_relative 'transform_request'
+require_relative 'transform_response'
+
+AiTrainingRatesUtility.registrar = ->(u) {
+  u.clean = AiTrainingRatesUtilities::Clean
+  u.clean_add = AiTrainingRatesUtilities::CleanAdd
+  u.clean_explain = AiTrainingRatesUtilities::CleanExplain
+  u.done = AiTrainingRatesUtilities::Done
+  u.make_error = AiTrainingRatesUtilities::MakeError
+  u.feature_add = AiTrainingRatesUtilities::FeatureAdd
+  u.feature_hook = AiTrainingRatesUtilities::FeatureHook
+  u.feature_init = AiTrainingRatesUtilities::FeatureInit
+  u.fetcher = AiTrainingRatesUtilities::Fetcher
+  u.make_fetch_def = AiTrainingRatesUtilities::MakeFetchDef
+  u.make_context = AiTrainingRatesUtilities::MakeContext
+  u.make_options = AiTrainingRatesUtilities::MakeOptions
+  u.make_request = AiTrainingRatesUtilities::MakeRequest
+  u.make_response = AiTrainingRatesUtilities::MakeResponse
+  u.make_result = AiTrainingRatesUtilities::MakeResult
+  u.make_point = AiTrainingRatesUtilities::MakePoint
+  u.make_spec = AiTrainingRatesUtilities::MakeSpec
+  u.make_url = AiTrainingRatesUtilities::MakeUrl
+  u.param = AiTrainingRatesUtilities::Param
+  u.prepare_auth = AiTrainingRatesUtilities::PrepareAuth
+  u.prepare_body = AiTrainingRatesUtilities::PrepareBody
+  u.prepare_headers = AiTrainingRatesUtilities::PrepareHeaders
+  u.prepare_method = AiTrainingRatesUtilities::PrepareMethod
+  u.prepare_params = AiTrainingRatesUtilities::PrepareParams
+  u.prepare_path = AiTrainingRatesUtilities::PreparePath
+  u.prepare_query = AiTrainingRatesUtilities::PrepareQuery
+  u.graphql_body = AiTrainingRatesUtilities::GraphqlBody
+  u.graphql_errors = AiTrainingRatesUtilities::GraphqlErrors
+  u.result_basic = AiTrainingRatesUtilities::ResultBasic
+  u.result_body = AiTrainingRatesUtilities::ResultBody
+  u.result_headers = AiTrainingRatesUtilities::ResultHeaders
+  u.transform_request = AiTrainingRatesUtilities::TransformRequest
+  u.transform_response = AiTrainingRatesUtilities::TransformResponse
+}

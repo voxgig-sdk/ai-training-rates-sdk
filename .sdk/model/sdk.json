@@ -1,0 +1,3196 @@
+{
+  "def": "ai-training-rates_0.1.0.json",
+  "main": {
+    "def": {
+      "desc": ""
+    },
+    "kit": {
+      "author": {
+        "name": "",
+        "url": ""
+      },
+      "config": {
+        "docs_order": [
+          "ts",
+          "py",
+          "php",
+          "go",
+          "rb",
+          "lua"
+        ],
+        "headers": {
+          "content-type": "application/json"
+        },
+        "repr": "auto"
+      },
+      "contributor": {},
+      "doc": {
+        "active": true,
+        "assets": {
+          "path": ".sdk/doc/assets"
+        },
+        "brand": {
+          "label": "",
+          "notice": "",
+          "shortNotice": "",
+          "url": ""
+        },
+        "ci": {
+          "active": true,
+          "branch": "main"
+        },
+        "content": {
+          "path": ".sdk/doc/content"
+        },
+        "edition": {
+          "summary": {
+            "active": true,
+            "base": "node_modules/@voxgig/docgen/project/.sdk",
+            "brand": {},
+            "filter": {
+              "entities": [],
+              "features": [],
+              "targets": []
+            },
+            "kind": "summary",
+            "name": "summary",
+            "origname": "",
+            "output": {
+              "path": "SUMMARY.md"
+            },
+            "package": "@voxgig/docgen",
+            "published": false,
+            "site": {
+              "active": true
+            },
+            "style": {},
+            "title": ""
+          }
+        },
+        "qa": {
+          "vocabulary": []
+        },
+        "style": {
+          "color": {
+            "accent": "#00c6d8",
+            "background": "#f5f5f9",
+            "darkBackground": "#0f1117",
+            "darkText": "#e6edf3",
+            "primary": "#e70042",
+            "text": "#0a0a0a"
+          },
+          "font": "Nunito, system-ui, sans-serif",
+          "fontFile": "",
+          "headingFont": "Nunito, system-ui, sans-serif",
+          "headingFontFile": "",
+          "logo": "",
+          "mode": "light",
+          "mono": "ui-monospace, monospace",
+          "monoFile": ""
+        },
+        "target": {}
+      },
+      "entity": {
+        "guidance": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "addedOn": {
+              "a": true,
+              "h": "Added On",
+              "n": "addedOn",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "finding": {
+              "a": true,
+              "h": "Finding",
+              "n": "finding",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "howToUse": {
+              "a": true,
+              "h": "How To Use",
+              "n": "howToUse",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "lever": {
+              "a": true,
+              "h": "Lever",
+              "n": "lever",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "readOn": {
+              "a": true,
+              "h": "Read On",
+              "n": "readOn",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "side": {
+              "a": true,
+              "h": "Side",
+              "n": "side",
+              "r": true,
+              "sh": "Values seen: both, buyer, seller.",
+              "t": "`$STRING`"
+            },
+            "sources": {
+              "a": true,
+              "h": "Sources",
+              "n": "sources",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "strength": {
+              "a": true,
+              "h": "Strength",
+              "n": "strength",
+              "r": true,
+              "sh": "Values seen: indicative, strong.",
+              "t": "`$STRING`"
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
+          "name": "guidance",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /datasets/negotiation-levers.json",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/datasets/negotiation-levers.json",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "datasets"
+                    },
+                    {
+                      "lit": "negotiation-levers.json"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "legal": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "amountText": {
+              "a": true,
+              "h": "Amount Text",
+              "n": "amountText",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "amountUsd": {
+              "a": true,
+              "h": "Amount Usd",
+              "n": "amountUsd",
+              "r": true,
+              "t": "`$INTEGER`"
+            },
+            "apiLimit": {
+              "a": true,
+              "h": "Api Limit",
+              "n": "apiLimit",
+              "r": true,
+              "sh": "Values seen: bars-ai-training, bars-copying, none-found, unclear.",
+              "t": "`$STRING`"
+            },
+            "apiRule": {
+              "a": true,
+              "h": "Api Rule",
+              "n": "apiRule",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "appliesTo": {
+              "a": true,
+              "h": "Applies To",
+              "n": "appliesTo",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "basis": {
+              "a": true,
+              "h": "Basis",
+              "n": "basis",
+              "r": true,
+              "sh": "Values seen: reported, stated.",
+              "t": "`$STRING`"
+            },
+            "buyersAsk": {
+              "a": true,
+              "h": "Buyers Ask",
+              "n": "buyersAsk",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "byPlan": {
+              "a": true,
+              "h": "By Plan",
+              "n": "byPlan",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "caseNumber": {
+              "a": true,
+              "h": "Case Number",
+              "n": "caseNumber",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "claim": {
+              "a": true,
+              "h": "Claim",
+              "n": "claim",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "contentType": {
+              "a": true,
+              "h": "Content Type",
+              "n": "contentType",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "date": {
+              "a": true,
+              "h": "Date",
+              "n": "date",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "defendantIds": {
+              "a": true,
+              "h": "Defendant Ids",
+              "n": "defendantIds",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "evidence": {
+              "a": true,
+              "h": "Evidence",
+              "n": "evidence",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "exportAllowed": {
+              "a": true,
+              "h": "Export Allowed",
+              "n": "exportAllowed",
+              "r": true,
+              "sh": "Values seen: limited, unclear, yes.",
+              "t": "`$STRING`"
+            },
+            "exportRule": {
+              "a": true,
+              "h": "Export Rule",
+              "n": "exportRule",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "gap": {
+              "a": true,
+              "h": "Gap",
+              "n": "gap",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "good": {
+              "a": true,
+              "h": "Good",
+              "n": "good",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "inference": {
+              "a": true,
+              "h": "Inference",
+              "n": "inference",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "jurisdiction": {
+              "a": true,
+              "h": "Jurisdiction",
+              "n": "jurisdiction",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "kind": {
+              "a": true,
+              "h": "Kind",
+              "n": "kind",
+              "r": true,
+              "sh": "Values seen: guidance, lawsuit, regulatory action, ruling, settlement.",
+              "t": "`$STRING`"
+            },
+            "name": {
+              "a": true,
+              "h": "Name",
+              "n": "name",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "notes": {
+              "a": true,
+              "h": "Notes",
+              "n": "notes",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "outcome": {
+              "a": true,
+              "h": "Outcome",
+              "n": "outcome",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "parties": {
+              "a": true,
+              "h": "Parties",
+              "n": "parties",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "partyIds": {
+              "a": true,
+              "h": "Party Ids",
+              "n": "partyIds",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "perWorkText": {
+              "a": true,
+              "h": "Per Work Text",
+              "n": "perWorkText",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "question": {
+              "a": true,
+              "h": "Question",
+              "n": "question",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "quote": {
+              "a": true,
+              "h": "Quote",
+              "n": "quote",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "redFlag": {
+              "a": true,
+              "h": "Red Flag",
+              "n": "redFlag",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "risk": {
+              "a": true,
+              "h": "Risk",
+              "n": "risk",
+              "r": true,
+              "sh": "Values seen: high, low, medium.",
+              "t": "`$STRING`"
+            },
+            "sellerPosition": {
+              "a": true,
+              "h": "Seller Position",
+              "n": "sellerPosition",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "severity": {
+              "a": true,
+              "h": "Severity",
+              "n": "severity",
+              "r": true,
+              "sh": "Values seen: blocker, fixable, note.",
+              "t": "`$STRING`"
+            },
+            "source": {
+              "a": true,
+              "h": "Source",
+              "n": "source",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "sourceDate": {
+              "a": true,
+              "h": "Source Date",
+              "n": "sourceDate",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "sourceLabel": {
+              "a": true,
+              "h": "Source Label",
+              "n": "sourceLabel",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "sources": {
+              "a": true,
+              "h": "Sources",
+              "n": "sources",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "status": {
+              "a": true,
+              "h": "Status",
+              "n": "status",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "statusAsOf": {
+              "a": true,
+              "h": "Status As Of",
+              "n": "statusAsOf",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "summary": {
+              "a": true,
+              "h": "Summary",
+              "n": "summary",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "term": {
+              "a": true,
+              "h": "Term",
+              "n": "term",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "title": {
+              "a": true,
+              "h": "Title",
+              "n": "title",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "why": {
+              "a": true,
+              "h": "Why",
+              "n": "why",
+              "r": true,
+              "t": "`$STRING`"
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
+          "name": "legal",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /datasets/cases.json",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/datasets/cases.json",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "datasets"
+                    },
+                    {
+                      "lit": "cases.json"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /datasets/licence-terms.json",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/datasets/licence-terms.json",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "datasets"
+                    },
+                    {
+                      "lit": "licence-terms.json"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /datasets/rights-checks.json",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/datasets/rights-checks.json",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "datasets"
+                    },
+                    {
+                      "lit": "rights-checks.json"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /datasets/software-terms.json",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/datasets/software-terms.json",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "datasets"
+                    },
+                    {
+                      "lit": "software-terms.json"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "market": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "acquirer": {
+              "a": true,
+              "h": "Acquirer",
+              "n": "acquirer",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "addedOn": {
+              "a": true,
+              "h": "Added On",
+              "n": "addedOn",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "amountText": {
+              "a": true,
+              "h": "Amount Text",
+              "n": "amountText",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "amountUsd": {
+              "a": true,
+              "h": "Amount Usd",
+              "n": "amountUsd",
+              "r": true,
+              "t": "`$INTEGER`"
+            },
+            "annualUsd": {
+              "a": true,
+              "h": "Annual Usd",
+              "n": "annualUsd",
+              "r": true,
+              "t": "`$INTEGER`"
+            },
+            "basis": {
+              "a": true,
+              "h": "Basis",
+              "n": "basis",
+              "r": true,
+              "sh": "Values seen: reported, stated.",
+              "t": "`$STRING`"
+            },
+            "channel": {
+              "a": true,
+              "h": "Channel",
+              "n": "channel",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "checkWith": {
+              "a": true,
+              "h": "Check With",
+              "n": "checkWith",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "company": {
+              "a": true,
+              "h": "Company",
+              "n": "company",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "companyId": {
+              "a": true,
+              "h": "Company Id",
+              "n": "companyId",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "content": {
+              "a": true,
+              "h": "Content",
+              "n": "content",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "counterparty": {
+              "a": true,
+              "h": "Counterparty",
+              "n": "counterparty",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "dataType": {
+              "a": true,
+              "h": "Data Type",
+              "n": "dataType",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "date": {
+              "a": true,
+              "h": "Date",
+              "n": "date",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "event": {
+              "a": true,
+              "h": "Event",
+              "n": "event",
+              "r": true,
+              "sh": "Values seen: acquisition, financing, funding, investment, secondary, valuation.",
+              "t": "`$STRING`"
+            },
+            "fact": {
+              "a": true,
+              "h": "Fact",
+              "n": "fact",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "figure": {
+              "a": true,
+              "h": "Figure",
+              "n": "figure",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "kind": {
+              "a": true,
+              "h": "Kind",
+              "n": "kind",
+              "r": true,
+              "sh": "Values seen: broker economics, buyer program, intermediary, legal or policy, price range, referral terms, transaction.",
+              "t": "`$STRING`"
+            },
+            "leadInvestors": {
+              "a": true,
+              "h": "Lead Investors",
+              "n": "leadInvestors",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "licensee": {
+              "a": true,
+              "h": "Licensee",
+              "n": "licensee",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "licenseeIds": {
+              "a": true,
+              "h": "Licensee Ids",
+              "n": "licenseeIds",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "licensor": {
+              "a": true,
+              "h": "Licensor",
+              "n": "licensor",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "licensorId": {
+              "a": true,
+              "h": "Licensor Id",
+              "n": "licensorId",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "licensorType": {
+              "a": true,
+              "h": "Licensor Type",
+              "n": "licensorType",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "metric": {
+              "a": true,
+              "h": "Metric",
+              "n": "metric",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "party": {
+              "a": true,
+              "h": "Party",
+              "n": "party",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "partyId": {
+              "a": true,
+              "h": "Party Id",
+              "n": "partyId",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "period": {
+              "a": true,
+              "h": "Period",
+              "n": "period",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "periodEnd": {
+              "a": true,
+              "h": "Period End",
+              "n": "periodEnd",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "quote": {
+              "a": true,
+              "h": "Quote",
+              "n": "quote",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "readOn": {
+              "a": true,
+              "h": "Read On",
+              "n": "readOn",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "round": {
+              "a": true,
+              "h": "Round",
+              "n": "round",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "segment": {
+              "a": true,
+              "h": "Segment",
+              "n": "segment",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "source": {
+              "a": true,
+              "h": "Source",
+              "n": "source",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "sourceDate": {
+              "a": true,
+              "h": "Source Date",
+              "n": "sourceDate",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "sourceLabel": {
+              "a": true,
+              "h": "Source Label",
+              "n": "sourceLabel",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "status": {
+              "a": true,
+              "h": "Status",
+              "n": "status",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "supersededBy": {
+              "a": true,
+              "h": "Superseded By",
+              "n": "supersededBy",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "termYears": {
+              "a": true,
+              "h": "Term Years",
+              "n": "termYears",
+              "r": true,
+              "t": "`$INTEGER`"
+            },
+            "termsText": {
+              "a": true,
+              "h": "Terms Text",
+              "n": "termsText",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "unit": {
+              "a": true,
+              "h": "Unit",
+              "n": "unit",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "unitPriceText": {
+              "a": true,
+              "h": "Unit Price Text",
+              "n": "unitPriceText",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "url": {
+              "a": true,
+              "h": "Url",
+              "n": "url",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "use": {
+              "a": true,
+              "h": "Use",
+              "n": "use",
+              "r": true,
+              "sh": "Values seen: both, display/grounding, training, unstated.",
+              "t": "`$STRING`"
+            },
+            "valuationText": {
+              "a": true,
+              "h": "Valuation Text",
+              "n": "valuationText",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "valuationUsd": {
+              "a": true,
+              "h": "Valuation Usd",
+              "n": "valuationUsd",
+              "r": true,
+              "t": "`$INTEGER`"
+            },
+            "valueHighUsd": {
+              "a": true,
+              "h": "Value High Usd",
+              "n": "valueHighUsd",
+              "r": true,
+              "t": "`$INTEGER`"
+            },
+            "valueLowUsd": {
+              "a": true,
+              "h": "Value Low Usd",
+              "n": "valueLowUsd",
+              "r": true,
+              "t": "`$INTEGER`"
+            },
+            "valueText": {
+              "a": true,
+              "h": "Value Text",
+              "n": "valueText",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "valueUsd": {
+              "a": true,
+              "h": "Value Usd",
+              "n": "valueUsd",
+              "r": true,
+              "t": "`$INTEGER`"
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
+          "name": "market",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /datasets/deals.json",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/datasets/deals.json",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "datasets"
+                    },
+                    {
+                      "lit": "deals.json"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /datasets/financials.json",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/datasets/financials.json",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "datasets"
+                    },
+                    {
+                      "lit": "financials.json"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /datasets/funding.json",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/datasets/funding.json",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "datasets"
+                    },
+                    {
+                      "lit": "funding.json"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /datasets/market-log.json",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/datasets/market-log.json",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "datasets"
+                    },
+                    {
+                      "lit": "market-log.json"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /datasets/supply.json",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/datasets/supply.json",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "datasets"
+                    },
+                    {
+                      "lit": "supply.json"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "organisation": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "aka": {
+              "a": true,
+              "h": "Aka",
+              "n": "aka",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "areas": {
+              "a": true,
+              "h": "Areas",
+              "n": "areas",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "basis": {
+              "a": true,
+              "h": "Basis",
+              "n": "basis",
+              "r": true,
+              "sh": "Values seen: reported, stated.",
+              "t": "`$STRING`"
+            },
+            "buysData": {
+              "a": true,
+              "h": "Buys Data",
+              "n": "buysData",
+              "r": true,
+              "sh": "The vendor's own words and the page they are on.",
+              "t": "`$OBJECT`"
+            },
+            "criteria": {
+              "a": true,
+              "h": "Criteria",
+              "n": "criteria",
+              "r": true,
+              "sh": "Eligibility criteria as published by the buyer; every key is optional.",
+              "t": "`$OBJECT`"
+            },
+            "deidentifiedBy": {
+              "a": true,
+              "h": "Deidentified By",
+              "n": "deidentifiedBy",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "domain": {
+              "a": true,
+              "h": "Domain",
+              "n": "domain",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "eligibility": {
+              "a": true,
+              "h": "Eligibility",
+              "n": "eligibility",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "founded": {
+              "a": true,
+              "h": "Founded",
+              "n": "founded",
+              "r": true,
+              "t": "`$INTEGER`"
+            },
+            "high": {
+              "a": true,
+              "h": "High",
+              "n": "high",
+              "r": true,
+              "t": "`$INTEGER`"
+            },
+            "hq": {
+              "a": true,
+              "h": "Hq",
+              "n": "hq",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "introducerFee": {
+              "a": true,
+              "h": "Introducer Fee",
+              "n": "introducerFee",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "introducerTerms": {
+              "a": true,
+              "h": "Introducer Terms",
+              "n": "introducerTerms",
+              "r": false,
+              "sh": "Structured introducer (referral) fee terms: rate is a fraction, cap and flat are USD.",
+              "t": "`$OBJECT`"
+            },
+            "kind": {
+              "a": true,
+              "h": "Kind",
+              "n": "kind",
+              "r": true,
+              "sh": "Values seen: broker, collector, marketplace, principal, wind-down.",
+              "t": "`$STRING`"
+            },
+            "low": {
+              "a": true,
+              "h": "Low",
+              "n": "low",
+              "r": true,
+              "t": "`$INTEGER`"
+            },
+            "madeFrom": {
+              "a": true,
+              "h": "Made From",
+              "n": "madeFrom",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "name": {
+              "a": true,
+              "h": "Name",
+              "n": "name",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "otherDomains": {
+              "a": true,
+              "h": "Other Domains",
+              "n": "otherDomains",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "paidInDays": {
+              "a": true,
+              "h": "Paid In Days",
+              "n": "paidInDays",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "paidWhen": {
+              "a": true,
+              "h": "Paid When",
+              "n": "paidWhen",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "pays": {
+              "a": true,
+              "h": "Pays",
+              "n": "pays",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "proof": {
+              "a": true,
+              "h": "Proof",
+              "n": "proof",
+              "r": true,
+              "t": "`$OBJECT`"
+            },
+            "readOn": {
+              "a": true,
+              "h": "Read On",
+              "n": "readOn",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "record": {
+              "a": true,
+              "h": "Record",
+              "n": "record",
+              "r": true,
+              "t": "`$OBJECT`"
+            },
+            "says": {
+              "a": true,
+              "h": "Says",
+              "n": "says",
+              "r": true,
+              "sh": "The vendor's own words and the page they are on.",
+              "t": "`$OBJECT`"
+            },
+            "scrub": {
+              "a": true,
+              "h": "Scrub",
+              "n": "scrub",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "sells": {
+              "a": true,
+              "h": "Sells",
+              "n": "sells",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "source": {
+              "a": true,
+              "h": "Source",
+              "n": "source",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "sourceLabel": {
+              "a": true,
+              "h": "Source Label",
+              "n": "sourceLabel",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "takes": {
+              "a": true,
+              "h": "Takes",
+              "n": "takes",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "wants": {
+              "a": true,
+              "h": "Wants",
+              "n": "wants",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "website": {
+              "a": true,
+              "h": "Website",
+              "n": "website",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "what": {
+              "a": true,
+              "h": "What",
+              "n": "what",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "whatSource": {
+              "a": true,
+              "h": "What Source",
+              "n": "whatSource",
+              "r": true,
+              "t": "`$STRING`"
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
+          "name": "organisation",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /datasets/buyers.json",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/datasets/buyers.json",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "datasets"
+                    },
+                    {
+                      "lit": "buyers.json"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /datasets/companies.json",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/datasets/companies.json",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "datasets"
+                    },
+                    {
+                      "lit": "companies.json"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /datasets/vendors.json",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/datasets/vendors.json",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "datasets"
+                    },
+                    {
+                      "lit": "vendors.json"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "price": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "addedOn": {
+              "a": true,
+              "h": "Added On",
+              "n": "addedOn",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "basis": {
+              "a": true,
+              "h": "Basis",
+              "n": "basis",
+              "r": true,
+              "sh": "Values seen: docket, listing, reported, stated, vendor.",
+              "t": "`$STRING`"
+            },
+            "checkWith": {
+              "a": true,
+              "h": "Check With",
+              "n": "checkWith",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "closedOn": {
+              "a": true,
+              "h": "Closed On",
+              "n": "closedOn",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "currency": {
+              "a": true,
+              "h": "Currency",
+              "n": "currency",
+              "r": false,
+              "sh": "Values seen: CNY, GBP, JPY, KRW, SGD, TWD.",
+              "t": "`$STRING`"
+            },
+            "date": {
+              "a": true,
+              "h": "Date",
+              "n": "date",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "feed": {
+              "a": true,
+              "h": "Feed",
+              "n": "feed",
+              "r": false,
+              "sh": "Values seen: aitraining-jobs-pay, aitraining-jobs-platform-pay.",
+              "t": "`$STRING`"
+            },
+            "from": {
+              "a": true,
+              "h": "From",
+              "n": "from",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "group": {
+              "a": true,
+              "h": "Group",
+              "n": "group",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "high": {
+              "a": true,
+              "h": "High",
+              "n": "high",
+              "r": true,
+              "t": "`$NUMBER`"
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "ids": {
+              "a": true,
+              "h": "Ids",
+              "n": "ids",
+              "r": true,
+              "sh": "Ids of the price observations (listPrices) behind this row.",
+              "t": "`$ARRAY`"
+            },
+            "item": {
+              "a": true,
+              "h": "Item",
+              "n": "item",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "low": {
+              "a": true,
+              "h": "Low",
+              "n": "low",
+              "r": true,
+              "t": "`$NUMBER`"
+            },
+            "max": {
+              "a": true,
+              "h": "Max",
+              "n": "max",
+              "r": true,
+              "t": "`$NUMBER`"
+            },
+            "median": {
+              "a": true,
+              "h": "Median",
+              "n": "median",
+              "r": true,
+              "t": "`$NUMBER`"
+            },
+            "min": {
+              "a": true,
+              "h": "Min",
+              "n": "min",
+              "r": true,
+              "t": "`$NUMBER`"
+            },
+            "n": {
+              "a": true,
+              "h": "N",
+              "n": "n",
+              "r": true,
+              "sh": "Number of observations.",
+              "t": "`$INTEGER`"
+            },
+            "note": {
+              "a": true,
+              "h": "Note",
+              "n": "note",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "open": {
+              "a": true,
+              "h": "Open",
+              "n": "open",
+              "r": true,
+              "sh": "Number of open-ended observations (no upper bound).",
+              "t": "`$INTEGER`"
+            },
+            "orgIds": {
+              "a": true,
+              "h": "Org Ids",
+              "n": "orgIds",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "orgNames": {
+              "a": true,
+              "h": "Org Names",
+              "n": "orgNames",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "p25": {
+              "a": true,
+              "h": "P25",
+              "n": "p25",
+              "r": true,
+              "t": "`$NUMBER`"
+            },
+            "p75": {
+              "a": true,
+              "h": "P75",
+              "n": "p75",
+              "r": true,
+              "t": "`$NUMBER`"
+            },
+            "perUnitHigh": {
+              "a": true,
+              "h": "Per Unit High",
+              "n": "perUnitHigh",
+              "r": true,
+              "t": "`$NUMBER`"
+            },
+            "perUnitLow": {
+              "a": true,
+              "h": "Per Unit Low",
+              "n": "perUnitLow",
+              "r": true,
+              "t": "`$NUMBER`"
+            },
+            "perUnitNote": {
+              "a": true,
+              "h": "Per Unit Note",
+              "n": "perUnitNote",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "price": {
+              "a": true,
+              "h": "Price",
+              "n": "price",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "quote": {
+              "a": true,
+              "h": "Quote",
+              "n": "quote",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "readOn": {
+              "a": true,
+              "h": "Read On",
+              "n": "readOn",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "segment": {
+              "a": true,
+              "h": "Segment",
+              "n": "segment",
+              "op": {
+                "list": {
+                  "req": false,
+                  "type": "`$STRING`"
+                }
+              },
+              "r": true,
+              "sh": "Always null in the probe; type unverified.",
+              "t": "`$STRING`"
+            },
+            "side": {
+              "a": true,
+              "h": "Side",
+              "n": "side",
+              "r": true,
+              "sh": "Values seen: collection, cost, licence, listing, offer, pay.",
+              "t": "`$STRING`"
+            },
+            "source": {
+              "a": true,
+              "h": "Source",
+              "n": "source",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "sourceLabel": {
+              "a": true,
+              "h": "Source Label",
+              "n": "sourceLabel",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "to": {
+              "a": true,
+              "h": "To",
+              "n": "to",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "unit": {
+              "a": true,
+              "h": "Unit",
+              "n": "unit",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "unitKey": {
+              "a": true,
+              "h": "Unit Key",
+              "n": "unitKey",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "use": {
+              "a": true,
+              "h": "Use",
+              "n": "use",
+              "op": {
+                "list": {
+                  "req": false,
+                  "type": "`$STRING`"
+                }
+              },
+              "r": true,
+              "t": "`$STRING`"
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
+          "name": "price",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /datasets/market-rates.json",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/datasets/market-rates.json",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "datasets"
+                    },
+                    {
+                      "lit": "market-rates.json"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /datasets/prices.json",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/datasets/prices.json",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "datasets"
+                    },
+                    {
+                      "lit": "prices.json"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        }
+      },
+      "feature": {
+        "ratelimit": {
+          "active": true,
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "config": {
+            "options": {
+              "active": false,
+              "burst": 5,
+              "rate": 5
+            },
+            "optspec": {
+              "now": "`$FUNCTION`",
+              "sleep": "`$FUNCTION`"
+            },
+            "strict": false
+          },
+          "description": "Client-side rate limiting via a token bucket",
+          "hook": {
+            "GetData": {
+              "active": false,
+              "await": false
+            },
+            "GetMatch": {
+              "active": false,
+              "await": false
+            },
+            "PostConstruct": {
+              "active": false,
+              "await": false
+            },
+            "PostConstructEntity": {
+              "active": false,
+              "await": false
+            },
+            "PostOperation": {
+              "active": false,
+              "await": false
+            },
+            "PreRequest": {
+              "active": false,
+              "await": false
+            },
+            "PreResponse": {
+              "active": false,
+              "await": false
+            },
+            "PreResult": {
+              "active": false,
+              "await": false
+            },
+            "PreSpec": {
+              "active": false,
+              "await": false
+            },
+            "PreTarget": {
+              "active": false,
+              "await": false
+            },
+            "SetData": {
+              "active": false,
+              "await": false
+            }
+          },
+          "name": "ratelimit",
+          "needs": {},
+          "origname": "",
+          "package": "@voxgig/sdkgen",
+          "plugin": {},
+          "spec": {},
+          "target": {
+            "go": {
+              "deps": {}
+            },
+            "go-cli": {
+              "deps": {}
+            },
+            "go-mcp": {
+              "deps": {}
+            },
+            "lua": {
+              "deps": {}
+            },
+            "php": {
+              "deps": {}
+            },
+            "py": {
+              "deps": {}
+            },
+            "rb": {
+              "deps": {}
+            },
+            "ts": {
+              "deps": {}
+            }
+          },
+          "title": "Rate limiting",
+          "transport": "wrap",
+          "version": "0.0.1"
+        },
+        "retry": {
+          "active": true,
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "config": {
+            "options": {
+              "active": false,
+              "factor": 2,
+              "maxDelay": 2000,
+              "minDelay": 50,
+              "retries": 2,
+              "statuses": [
+                408,
+                425,
+                429,
+                500,
+                502,
+                503,
+                504
+              ]
+            },
+            "optspec": {
+              "jitter": "`$BOOLEAN`",
+              "sleep": "`$FUNCTION`"
+            },
+            "strict": false
+          },
+          "description": "Automatic retry of transient failures with exponential backoff",
+          "hook": {
+            "GetData": {
+              "active": false,
+              "await": false
+            },
+            "GetMatch": {
+              "active": false,
+              "await": false
+            },
+            "PostConstruct": {
+              "active": false,
+              "await": false
+            },
+            "PostConstructEntity": {
+              "active": false,
+              "await": false
+            },
+            "PostOperation": {
+              "active": false,
+              "await": false
+            },
+            "PreRequest": {
+              "active": false,
+              "await": false
+            },
+            "PreResponse": {
+              "active": false,
+              "await": false
+            },
+            "PreResult": {
+              "active": false,
+              "await": false
+            },
+            "PreSpec": {
+              "active": false,
+              "await": false
+            },
+            "PreTarget": {
+              "active": false,
+              "await": false
+            },
+            "SetData": {
+              "active": false,
+              "await": false
+            }
+          },
+          "name": "retry",
+          "needs": {},
+          "origname": "",
+          "package": "@voxgig/sdkgen",
+          "plugin": {},
+          "spec": {},
+          "target": {
+            "go": {
+              "deps": {}
+            },
+            "go-cli": {
+              "deps": {}
+            },
+            "go-mcp": {
+              "deps": {}
+            },
+            "lua": {
+              "deps": {}
+            },
+            "php": {
+              "deps": {}
+            },
+            "py": {
+              "deps": {}
+            },
+            "rb": {
+              "deps": {}
+            },
+            "ts": {
+              "deps": {}
+            }
+          },
+          "title": "Retry",
+          "transport": "wrap",
+          "version": "0.0.1"
+        },
+        "test": {
+          "active": true,
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "config": {
+            "options": {
+              "active": false
+            },
+            "optspec": {
+              "entity": "`$MAP`",
+              "net": "`$MAP`"
+            },
+            "strict": false
+          },
+          "description": "In-memory mock transport for testing without a live server",
+          "hook": {
+            "GetData": {
+              "active": true,
+              "await": false
+            },
+            "GetMatch": {
+              "active": true,
+              "await": false
+            },
+            "PostConstruct": {
+              "active": true,
+              "await": false
+            },
+            "PostConstructEntity": {
+              "active": true,
+              "await": false
+            },
+            "PostOperation": {
+              "active": false,
+              "await": false
+            },
+            "PrePoint": {
+              "active": true,
+              "await": false
+            },
+            "PreRequest": {
+              "active": true,
+              "await": false
+            },
+            "PreResponse": {
+              "active": true,
+              "await": false
+            },
+            "PreResult": {
+              "active": true,
+              "await": false
+            },
+            "PreSpec": {
+              "active": true,
+              "await": false
+            },
+            "PreTarget": {
+              "active": false,
+              "await": false
+            },
+            "SetData": {
+              "active": true,
+              "await": false
+            },
+            "SetMatch": {
+              "active": true,
+              "await": false
+            }
+          },
+          "name": "test",
+          "needs": {},
+          "origname": "",
+          "package": "@voxgig/sdkgen",
+          "plugin": {},
+          "spec": {},
+          "target": {
+            "go": {
+              "deps": {}
+            },
+            "go-cli": {
+              "deps": {}
+            },
+            "go-mcp": {
+              "deps": {}
+            },
+            "lua": {
+              "deps": {}
+            },
+            "php": {
+              "deps": {}
+            },
+            "py": {
+              "deps": {}
+            },
+            "rb": {
+              "deps": {}
+            },
+            "ts": {
+              "deps": {}
+            }
+          },
+          "title": "Test transport",
+          "transport": "base",
+          "version": "0.0.1"
+        },
+        "timeout": {
+          "active": true,
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "config": {
+            "options": {
+              "active": false,
+              "ms": 30000
+            },
+            "optspec": {
+              "clearTimer": "`$FUNCTION`",
+              "now": "`$FUNCTION`",
+              "setTimer": "`$FUNCTION`"
+            },
+            "strict": false
+          },
+          "description": "Per-request timeout with transport abort",
+          "hook": {
+            "GetData": {
+              "active": false,
+              "await": false
+            },
+            "GetMatch": {
+              "active": false,
+              "await": false
+            },
+            "PostConstruct": {
+              "active": false,
+              "await": false
+            },
+            "PostConstructEntity": {
+              "active": false,
+              "await": false
+            },
+            "PostOperation": {
+              "active": false,
+              "await": false
+            },
+            "PreRequest": {
+              "active": false,
+              "await": false
+            },
+            "PreResponse": {
+              "active": false,
+              "await": false
+            },
+            "PreResult": {
+              "active": false,
+              "await": false
+            },
+            "PreSpec": {
+              "active": false,
+              "await": false
+            },
+            "PreTarget": {
+              "active": false,
+              "await": false
+            },
+            "SetData": {
+              "active": false,
+              "await": false
+            }
+          },
+          "name": "timeout",
+          "needs": {},
+          "origname": "",
+          "package": "@voxgig/sdkgen",
+          "plugin": {},
+          "spec": {},
+          "target": {
+            "go": {
+              "deps": {}
+            },
+            "go-cli": {
+              "deps": {}
+            },
+            "go-mcp": {
+              "deps": {}
+            },
+            "lua": {
+              "deps": {}
+            },
+            "php": {
+              "deps": {}
+            },
+            "py": {
+              "deps": {}
+            },
+            "rb": {
+              "deps": {}
+            },
+            "ts": {
+              "deps": {}
+            }
+          },
+          "title": "Timeout",
+          "transport": "wrap",
+          "version": "0.0.1"
+        }
+      },
+      "flow": {
+        "BasicGuidanceFlow": {
+          "active": true,
+          "entity": "guidance",
+          "key$": "BasicGuidanceFlow",
+          "kind": "basic",
+          "name": "BasicGuidanceFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "guidance_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicLegalFlow": {
+          "active": true,
+          "entity": "legal",
+          "key$": "BasicLegalFlow",
+          "kind": "basic",
+          "name": "BasicLegalFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "legal_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicMarketFlow": {
+          "active": true,
+          "entity": "market",
+          "key$": "BasicMarketFlow",
+          "kind": "basic",
+          "name": "BasicMarketFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "market_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicOrganisationFlow": {
+          "active": true,
+          "entity": "organisation",
+          "key$": "BasicOrganisationFlow",
+          "kind": "basic",
+          "name": "BasicOrganisationFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "organisation_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicPriceFlow": {
+          "active": true,
+          "entity": "price",
+          "key$": "BasicPriceFlow",
+          "kind": "basic",
+          "name": "BasicPriceFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "price_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "info": {
+        "auth": false,
+        "contact": {
+          "name": "AIData.Broker",
+          "url": "https://aidata.broker/"
+        },
+        "description": "Static JSON datasets published by AIData.Broker about the market for AI training data: market rates, price observations, deals, buyers, vendors, lawsuits, funding, revenue and licensing guidance. The catalog entry points at https://aidata.broker/datasets/market-rates.json; the full list of 15 tables comes from https://aidata.broker/llms.txt (section Datasets). Every schema was taken from live GET probes of all 15 JSON files on 2026-10-23 (no key, CORS enabled, cached for an hour). Each response is the same envelope (dataset, description, reviewed, license, rows) around a different row type. The CSV twin of each table (same path with .csv) is not modelled. The tables are reviewed and republished often, so optional fields (marked by absence from required) may come and go; enum-like value lists in descriptions are only what the probe saw. Licence: the compilation is CC BY 4.0; quoted text keeps its sources' terms. Unverified: type of MarketRate.segment (always null in the probe). Large: prices.json is about 1.6 MB.",
+        "license": {
+          "name": "CC BY 4.0 (compilation)",
+          "url": "https://creativecommons.org/licenses/by/4.0/"
+        },
+        "meta_source": "https://www.freepublicapis.com",
+        "servers": [
+          {
+            "description": "AIData.Broker static datasets",
+            "url": "https://aidata.broker"
+          }
+        ],
+        "summary": "Static JSON datasets published by AIData.Broker about the market for AI training data: market rates, price observations, deals, buyers, vendors, lawsuits, funding, revenue and licensing guidance.",
+        "title": "AI Training Rates (AIData.Broker datasets)",
+        "version": "1.0.0",
+        "website": "https://aidata.broker"
+      },
+      "option": {},
+      "optspec": {
+        "allow": {
+          "method": "GET,PUT,POST,PATCH,DELETE,OPTIONS",
+          "op": "create,update,patch,load,list,remove,command,direct,graphql"
+        },
+        "apikey": "",
+        "auth": {
+          "basic": false,
+          "in": "",
+          "name": "",
+          "prefix": ""
+        },
+        "base": "http://localhost:8000",
+        "clean": {
+          "active": true,
+          "hint": "0",
+          "keys": "key,secret,token,password,passwd,authorization,cookie,credential,signature",
+          "mask": "[redacted]",
+          "min": "4",
+          "values": ""
+        },
+        "entity": {
+          "`$CHILD`": {
+            "`$OPEN`": true,
+            "active": false,
+            "alias": {}
+          }
+        },
+        "extend": "`$ANY`",
+        "headers": {
+          "`$CHILD`": "`$STRING`"
+        },
+        "prefix": "",
+        "secret": "",
+        "server": {
+          "`$CHILD`": ""
+        },
+        "suffix": "",
+        "system": {
+          "fetch": "`$ANY`"
+        },
+        "test": {
+          "active": false,
+          "entity": {
+            "`$OPEN`": true
+          }
+        },
+        "utility": {}
+      },
+      "phase": {
+        "build": {
+          "active": true
+        },
+        "top": {
+          "active": true
+        }
+      },
+      "publisher": {
+        "name": "",
+        "security": "",
+        "url": ""
+      },
+      "repo": {
+        "host": "github.com",
+        "path": ""
+      },
+      "target": {
+        "go": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "//"
+          },
+          "deps": {},
+          "ext": "go",
+          "feature": {
+            "fullset": [
+              "test/feature_test.go"
+            ],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "ai-training-rates",
+            "package": "",
+            "path": ""
+          },
+          "name": "go",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "",
+              "package": "",
+              "state": "pending",
+              "url": "",
+              "vault": {
+                "alias": "",
+                "env": "",
+                "recipe": ""
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.0.1"
+          },
+          "srcfeature": false,
+          "superseded": [
+            "test/runner_test.go",
+            "test/struct_runner_test.go"
+          ],
+          "title": "Golang"
+        },
+        "go-cli": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "//"
+          },
+          "deps": {},
+          "ext": "go",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "ai-training-rates",
+            "package": "",
+            "path": ""
+          },
+          "name": "go-cli",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "phase": {
+            "agentguide": {
+              "active": false
+            },
+            "entity": {
+              "active": false
+            },
+            "feature": {
+              "active": false
+            },
+            "readme": {
+              "active": false
+            },
+            "test": {
+              "active": false
+            }
+          },
+          "provides": {},
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "",
+              "package": "",
+              "state": "pending",
+              "url": "",
+              "vault": {
+                "alias": "",
+                "env": "",
+                "recipe": ""
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "root"
+            },
+            "version": "0.0.1"
+          },
+          "superseded": [],
+          "title": "Go CLI"
+        },
+        "go-mcp": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "//"
+          },
+          "deps": {},
+          "ext": "go",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "ai-training-rates",
+            "package": "",
+            "path": ""
+          },
+          "name": "go-mcp",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "phase": {
+            "agentguide": {
+              "active": false
+            },
+            "entity": {
+              "active": false
+            },
+            "feature": {
+              "active": false
+            },
+            "readme": {
+              "active": false
+            },
+            "test": {
+              "active": false
+            }
+          },
+          "provides": {},
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "",
+              "package": "",
+              "state": "pending",
+              "url": "",
+              "vault": {
+                "alias": "",
+                "env": "",
+                "recipe": ""
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "root"
+            },
+            "version": "0.0.1"
+          },
+          "superseded": [],
+          "title": "Go MCP server",
+          "tool": {
+            "write": false
+          }
+        },
+        "lua": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "--"
+          },
+          "deps": {
+            "dkjson": {
+              "active": true,
+              "kind": "prod",
+              "version": "2.5"
+            }
+          },
+          "ext": "lua",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "ai-training-rates",
+            "package": "",
+            "path": ""
+          },
+          "name": "lua",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "luarocks",
+              "package": "",
+              "state": "pending",
+              "url": "https://luarocks.org",
+              "vault": {
+                "alias": "luarocks",
+                "env": "LUAROCKS_API_KEY",
+                "recipe": ""
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.0.1"
+          },
+          "srcfeature": false,
+          "superseded": [
+            "test/struct_runner.lua"
+          ],
+          "title": "Lua"
+        },
+        "php": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "//"
+          },
+          "deps": {},
+          "ext": "php",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "ai-training-rates",
+            "package": "",
+            "path": ""
+          },
+          "name": "php",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "packagist",
+              "package": "",
+              "state": "pending",
+              "url": "https://packagist.org",
+              "vault": {
+                "alias": "packagist",
+                "env": "PACKAGIST_API_TOKEN",
+                "recipe": ""
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.0.1"
+          },
+          "srcfeature": false,
+          "superseded": [
+            "test/StructRunner.php"
+          ],
+          "title": "PHP"
+        },
+        "py": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "#"
+          },
+          "deps": {
+            "requests": {
+              "active": true,
+              "kind": "prod",
+              "version": "2.33"
+            }
+          },
+          "ext": "py",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "ai-training-rates",
+            "package": "",
+            "path": ""
+          },
+          "name": "py",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "pypi",
+              "package": "",
+              "state": "pending",
+              "url": "https://pypi.org",
+              "vault": {
+                "alias": "pypi",
+                "env": "",
+                "recipe": "pypi"
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.0.1"
+          },
+          "srcfeature": false,
+          "superseded": [
+            "test/struct_runner.py"
+          ],
+          "title": "Python"
+        },
+        "rb": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "#"
+          },
+          "deps": {
+            "json": {
+              "active": true,
+              "kind": "prod",
+              "version": "*"
+            }
+          },
+          "ext": "rb",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "ai-training-rates",
+            "package": "",
+            "path": ""
+          },
+          "name": "rb",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "rubygems",
+              "package": "",
+              "state": "pending",
+              "url": "https://rubygems.org",
+              "vault": {
+                "alias": "gem",
+                "env": "",
+                "recipe": "gem"
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.0.1"
+          },
+          "srcfeature": false,
+          "superseded": [
+            "test/struct_runner.rb"
+          ],
+          "title": "Ruby"
+        },
+        "ts": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "//"
+          },
+          "deps": {
+            "@types/node": {
+              "active": true,
+              "kind": "dev",
+              "version": "^25.6.0"
+            },
+            "typescript": {
+              "active": true,
+              "kind": "dev",
+              "version": "^5.9.3"
+            }
+          },
+          "ext": "ts",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "ai-training-rates",
+            "package": "",
+            "path": ""
+          },
+          "name": "ts",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "npm",
+              "package": "",
+              "state": "pending",
+              "url": "https://registry.npmjs.org",
+              "vault": {
+                "alias": "npm",
+                "env": "",
+                "recipe": "npm"
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.0.1"
+          },
+          "superseded": [
+            "test/runner.ts",
+            "test/vendor/omni/compat.ts",
+            "src/feature/secrets/sekreto/Providers.ts",
+            "src/feature/secrets/sekreto/Sigv4.ts",
+            "src/feature/secrets/sekreto/provider/Registry.ts",
+            "src/feature/secrets/sekreto/provider/http.ts"
+          ],
+          "title": "TypeScript"
+        }
+      },
+      "test": {
+        "live": {
+          "app": false,
+          "base": "",
+          "strict": true
+        }
+      },
+      "text": {
+        "about_md": "",
+        "docs_url": "",
+        "entity_desc": {},
+        "homepage": "",
+        "meta_source": "",
+        "summary": "",
+        "tagline": "",
+        "title": "",
+        "website": ""
+      }
+    }
+  },
+  "name": "ai-training-rates",
+  "origin": "voxgig-sdk"
+}

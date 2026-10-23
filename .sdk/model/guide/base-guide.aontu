@@ -1,0 +1,71 @@
+# Generated from the API definition and overwritten on every build: do not
+# edit this file. Put customizations in the guide entry file, which includes
+# this one and overrides its defaults:
+#   guide.aontu
+
+guide: {
+  metrics: count: entity: 5
+  metrics: count: path: 15
+  metrics: count: method: 15
+
+  entity: guidance: {
+    path: "/datasets/negotiation-levers.json": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: legal: {
+    path: "/datasets/cases.json": {
+      op: list: method: *GET
+    }
+    path: "/datasets/licence-terms.json": {
+      op: list: method: *GET
+    }
+    path: "/datasets/rights-checks.json": {
+      op: list: method: *GET
+    }
+    path: "/datasets/software-terms.json": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: market: {
+    path: "/datasets/deals.json": {
+      op: list: method: *GET
+    }
+    path: "/datasets/financials.json": {
+      op: list: method: *GET
+    }
+    path: "/datasets/funding.json": {
+      op: list: method: *GET
+    }
+    path: "/datasets/market-log.json": {
+      op: list: method: *GET
+    }
+    path: "/datasets/supply.json": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: organisation: {
+    path: "/datasets/buyers.json": {
+      op: list: method: *GET
+    }
+    path: "/datasets/companies.json": {
+      op: list: method: *GET
+    }
+    path: "/datasets/vendors.json": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: price: {
+    path: "/datasets/market-rates.json": {
+      op: list: method: *GET
+    }
+    path: "/datasets/prices.json": {
+      op: list: method: *GET
+    }
+  }
+
+}

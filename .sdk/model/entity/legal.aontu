@@ -1,0 +1,396 @@
+# Entity: legal
+
+main: kit: entity: legal: {
+
+  alias: field: {}
+
+  fields: {
+    amountText: {
+      h: "Amount Text"
+      n: "amountText"
+      r: true
+      t: "`$STRING`"
+    }
+    amountUsd: {
+      h: "Amount Usd"
+      n: "amountUsd"
+      r: true
+      t: "`$INTEGER`"
+    }
+    apiLimit: {
+      h: "Api Limit"
+      n: "apiLimit"
+      r: true
+      sh: "Values seen: bars-ai-training, bars-copying, none-found, unclear."
+      t: "`$STRING`"
+    }
+    apiRule: {
+      h: "Api Rule"
+      n: "apiRule"
+      r: true
+      t: "`$STRING`"
+    }
+    appliesTo: {
+      h: "Applies To"
+      n: "appliesTo"
+      r: true
+      t: "`$ARRAY`"
+    }
+    basis: {
+      h: "Basis"
+      n: "basis"
+      r: true
+      sh: "Values seen: reported, stated."
+      t: "`$STRING`"
+    }
+    buyersAsk: {
+      h: "Buyers Ask"
+      n: "buyersAsk"
+      r: true
+      t: "`$STRING`"
+    }
+    byPlan: {
+      h: "By Plan"
+      n: "byPlan"
+      r: true
+      t: "`$STRING`"
+    }
+    caseNumber: {
+      h: "Case Number"
+      n: "caseNumber"
+      r: true
+      t: "`$STRING`"
+    }
+    claim: {
+      h: "Claim"
+      n: "claim"
+      r: true
+      t: "`$STRING`"
+    }
+    contentType: {
+      h: "Content Type"
+      n: "contentType"
+      r: true
+      t: "`$STRING`"
+    }
+    date: {
+      h: "Date"
+      n: "date"
+      r: true
+      t: "`$STRING`"
+    }
+    defendantIds: {
+      h: "Defendant Ids"
+      n: "defendantIds"
+      r: true
+      t: "`$ARRAY`"
+    }
+    evidence: {
+      h: "Evidence"
+      n: "evidence"
+      r: true
+      t: "`$STRING`"
+    }
+    exportAllowed: {
+      h: "Export Allowed"
+      n: "exportAllowed"
+      r: true
+      sh: "Values seen: limited, unclear, yes."
+      t: "`$STRING`"
+    }
+    exportRule: {
+      h: "Export Rule"
+      n: "exportRule"
+      r: true
+      t: "`$STRING`"
+    }
+    gap: {
+      h: "Gap"
+      n: "gap"
+      r: true
+      t: "`$STRING`"
+    }
+    good: {
+      h: "Good"
+      n: "good"
+      r: true
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: true
+      t: "`$STRING`"
+    }
+    inference: {
+      h: "Inference"
+      n: "inference"
+      r: true
+      t: "`$STRING`"
+    }
+    jurisdiction: {
+      h: "Jurisdiction"
+      n: "jurisdiction"
+      r: true
+      t: "`$STRING`"
+    }
+    kind: {
+      h: "Kind"
+      n: "kind"
+      r: true
+      sh: "Values seen: guidance, lawsuit, regulatory action, ruling, settlement."
+      t: "`$STRING`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: true
+      t: "`$STRING`"
+    }
+    notes: {
+      h: "Notes"
+      n: "notes"
+      r: true
+      t: "`$STRING`"
+    }
+    outcome: {
+      h: "Outcome"
+      n: "outcome"
+      r: true
+      t: "`$STRING`"
+    }
+    parties: {
+      h: "Parties"
+      n: "parties"
+      r: true
+      t: "`$ARRAY`"
+    }
+    partyIds: {
+      h: "Party Ids"
+      n: "partyIds"
+      r: true
+      t: "`$ARRAY`"
+    }
+    perWorkText: {
+      h: "Per Work Text"
+      n: "perWorkText"
+      r: true
+      t: "`$STRING`"
+    }
+    question: {
+      h: "Question"
+      n: "question"
+      r: true
+      t: "`$STRING`"
+    }
+    quote: {
+      h: "Quote"
+      n: "quote"
+      r: true
+      t: "`$STRING`"
+    }
+    redFlag: {
+      h: "Red Flag"
+      n: "redFlag"
+      r: true
+      t: "`$STRING`"
+    }
+    risk: {
+      h: "Risk"
+      n: "risk"
+      r: true
+      sh: "Values seen: high, low, medium."
+      t: "`$STRING`"
+    }
+    sellerPosition: {
+      h: "Seller Position"
+      n: "sellerPosition"
+      r: true
+      t: "`$STRING`"
+    }
+    severity: {
+      h: "Severity"
+      n: "severity"
+      r: true
+      sh: "Values seen: blocker, fixable, note."
+      t: "`$STRING`"
+    }
+    source: {
+      h: "Source"
+      n: "source"
+      r: true
+      t: "`$STRING`"
+    }
+    sourceDate: {
+      h: "Source Date"
+      n: "sourceDate"
+      r: true
+      t: "`$STRING`"
+    }
+    sourceLabel: {
+      h: "Source Label"
+      n: "sourceLabel"
+      r: true
+      t: "`$STRING`"
+    }
+    sources: {
+      h: "Sources"
+      n: "sources"
+      r: true
+      t: "`$ARRAY`"
+    }
+    status: {
+      h: "Status"
+      n: "status"
+      r: true
+      t: "`$STRING`"
+    }
+    statusAsOf: {
+      h: "Status As Of"
+      n: "statusAsOf"
+      r: true
+      t: "`$STRING`"
+    }
+    summary: {
+      h: "Summary"
+      n: "summary"
+      r: true
+      t: "`$STRING`"
+    }
+    term: {
+      h: "Term"
+      n: "term"
+      r: true
+      t: "`$STRING`"
+    }
+    title: {
+      h: "Title"
+      n: "title"
+      r: true
+      t: "`$STRING`"
+    }
+    why: {
+      h: "Why"
+      n: "why"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "legal"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /datasets/cases.json"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/datasets/cases.json"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "datasets"
+            }
+            {
+              lit: "cases.json"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /datasets/licence-terms.json"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/datasets/licence-terms.json"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "datasets"
+            }
+            {
+              lit: "licence-terms.json"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /datasets/rights-checks.json"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/datasets/rights-checks.json"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "datasets"
+            }
+            {
+              lit: "rights-checks.json"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /datasets/software-terms.json"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/datasets/software-terms.json"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "datasets"
+            }
+            {
+              lit: "software-terms.json"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}
